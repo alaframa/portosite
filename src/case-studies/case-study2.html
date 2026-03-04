@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Station Detail | Alaf Ramadhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/main.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-black text-white">
+    <nav class="fixed top-0 w-full z-50 bg-black/90 border-b border-zinc-900 py-4 px-6">
+        <div class="max-w-7xl mx-auto">
+            <a href="../case-studies.html" class="flex items-center gap-2 text-zinc-500 hover:text-white font-mono text-xs transition-colors">
+                <i data-lucide="arrow-left" size="14"></i> BACK_TO_REPOSITORY
+            </a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-24 page-transition">
+        <div class="space-y-8">
+            <span class="text-blue-500 font-mono text-xs uppercase tracking-widest">PROJ_REF: 2020_SOLAR_V1</span>
+            <h1 class="text-5xl md:text-7xl font-bold font-mono tracking-tighter uppercase leading-none">Solar-based Power Station</h1>
+            
+            <div class="aspect-video bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-700">
+                <i data-lucide="image" size="48"></i>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+                <div class="md:col-span-2 space-y-8 text-zinc-400 leading-relaxed text-lg">
+                    <section>
+                        <h2 class="text-white font-bold font-mono text-xl uppercase mb-4">The Challenge</h2>
+                        <p>Bridging the gap between decentralized solar energy generation and real-time operational monitoring in remote locations.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-white font-bold font-mono text-xl uppercase mb-4">Technical Execution</h2>
+                        <p>Implemented an Arduino Nano based edge layer with ESP01 connectivity. Custom-built voltage sensing circuits were deployed to monitor 3-phase decentralized nodes with precision.</p>
+                    </section>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-6 bg-zinc-900/50 border border-zinc-800 rounded-sm">
+                        <h4 class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-4">Specs</h4>
+                        <div class="space-y-2 text-xs font-mono">
+                            <div class="flex justify-between"><span>MCU</span><span class="text-white">Arduino</span></div>
+                            <div class="flex justify-between"><span>NET</span><span class="text-white">WiFi/ESP01</span></div>
+                            <div class="flex justify-between"><span>VALUE</span><span class="text-green-500">80M IDR</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

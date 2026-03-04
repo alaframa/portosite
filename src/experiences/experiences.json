@@ -1,0 +1,16 @@
+[
+    {
+        "company": "Unilever Oleochemical",
+        "role": "IT Support Helpdesk",
+        "period": "2025 - Present",
+        "desc": "On-site infrastructure management, Active Directory, and SAP S/4HANA support.",
+        "location": "src/experience1.html"
+    },
+    {
+        "company": "PT Synapsis Synergi Digital",
+        "role": "Firmware Engineer",
+        "period": "2024",
+        "desc": "Industrial protocol hub development and ESP32 firmware optimization.",
+        "location": "src/experience2.html"
+    }
+]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture | Alaf Ramadhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grid-pattern">
+    <nav id="navbar" class="fixed top-0 w-full z-50 py-6 px-6 bg-black/90 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white text-black font-bold flex items-center justify-center rounded-sm">A</div>
+            </a>
+            <div class="flex items-center gap-8 text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="case-studies.html" class="nav-link">Case Studies</a>
+                <a href="architecture.html" class="nav-link active">Architecture</a>
+                <a href="cv.html" class="nav-link">Experience</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-24 page-fade-in">
+        <h2 class="text-4xl font-bold font-mono tracking-tighter uppercase mb-16">System_Blueprint</h2>
+        <div class="bg-zinc-900/50 border border-zinc-800 p-12 rounded-sm mb-12 overflow-x-auto">
+            <div class="min-w-[800px] flex justify-between">
+                <div class="w-1/4 p-6 border border-zinc-700 bg-black rounded-sm">
+                    <div class="text-orange-500 font-mono text-xs mb-4 uppercase">Edge_Level</div>
+                    <div class="text-white text-sm font-bold">Modbus / RS485 Sensors</div>
+                </div>
+                <div class="flex items-center text-zinc-800"><i data-lucide="arrow-right"></i></div>
+                <div class="w-1/4 p-6 border border-zinc-700 bg-black rounded-sm">
+                    <div class="text-blue-500 font-mono text-xs mb-4 uppercase">Gateway</div>
+                    <div class="text-white text-sm font-bold">NGINX / MQTT Hub</div>
+                </div>
+                <div class="flex items-center text-zinc-800"><i data-lucide="arrow-right"></i></div>
+                <div class="w-1/4 p-6 border border-zinc-700 bg-black rounded-sm">
+                    <div class="text-cyan-500 font-mono text-xs mb-4 uppercase">Infrastructure</div>
+                    <div class="text-white text-sm font-bold">AWS / Entra ID</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

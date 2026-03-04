@@ -1,0 +1,20 @@
+[
+    {
+        "year": "2020",
+        "title": "Solar-based Power Station",
+        "value": "80,000,000 IDR",
+        "image": "src/casestudy/image1.jpg",
+        "description": "Decentralized energy monitoring with Arduino Nano & ESP01. Focused on real-time acquisition.",
+        "tech": ["IoT", "Arduino", "ESP01"],
+        "location": "src/casestudy/"
+    },
+    {
+        "year": "2024",
+        "title": "3-Phase Energy Monitoring",
+        "value": "49,000,000 IDR",
+        "image": "src/casestudy/image2.jpg",
+        "description": "Industrial grid monitoring via AWS Lambda & ESP32. Enterprise-scale data pipeline.",
+        "tech": ["AWS", "Modbus", "ESP32"],
+        "location": "src/case-study2.html"
+    }
+]
