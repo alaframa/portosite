@@ -469,7 +469,7 @@
             <a href="https://linkedin.com/in/alaf-ramadhan/" target="_blank" class="mono"
                style="font-size:10px;color:#3f3f46;text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color 0.2s;"
                onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#3f3f46'">LinkedIn</a>
-            <a href="/cdn-cgi/l/email-protection#d899b4b9bef6baadababb1b6bdabab98bfb5b9b1b4f6bbb7b5" class="mono" style="font-size:10px;color:#3f3f46;text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#3f3f46'">Email</a>
+            <a href="mailto:alaf.bussiness@gmail.com" class="mono" style="font-size:10px;color:#3f3f46;text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#3f3f46'">Email</a>
         </div>
     </div>
 </footer>
@@ -478,7 +478,7 @@
 <!-- ════════════════════════════════════════
      JAVASCRIPT
 ════════════════════════════════════════ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ─────────────────────────────────
 //  CONFIG
 // ─────────────────────────────────
@@ -862,4 +862,15 @@ window.addEventListener('DOMContentLoaded', () => {
     PAGES.forEach(p => {
         if (p !== 'home') document.getElementById('page-' + p).style.display = 'none';
     });
-    DETAILS.forEach(d => { document.getElementById(d)
+    DETAILS.forEach(d => { document.getElementById(d).style.display = 'none'; });
+
+    lucide.createIcons();
+    setTimeout(initReveal, 100);
+
+    // Preload both data sources in parallel
+    loadProjects();
+    loadExperiences();
+});
+</script>
+</body>
+</html>
