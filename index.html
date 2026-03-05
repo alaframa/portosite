@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alaf Ramadhan | Industrial IT & Infrastructure</title>
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Alaf Ramadhan | Industrial IT & Infrastructure Engineer">
-    <meta property="og:description"
-        content="Portfolio of Alaf Ramadhan — Industrial IT infrastructure, IoT systems, automation, and engineering projects.">
+    <meta property="og:description" content="Portfolio of Alaf Ramadhan — Industrial IT infrastructure, IoT systems, automation, and engineering projects.">
     <meta property="og:image" content="https://alaf.my.id/public/og-preview.jpg">
     <meta property="og:url" content="https://alaf.my.id/">
     <meta property="og:type" content="website">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://alaf.my.id/public/og-preview.jpg">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        :root {
-            --blue: #3b82f6;
-            --cyan: #22d3ee;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
+        :root { --blue: #3b82f6; --cyan: #22d3ee; }
+        * { box-sizing: border-box; }
         body {
             background-color: #000;
             color: #fff;
@@ -37,11 +26,7 @@
             overflow-x: hidden;
             margin: 0;
         }
-
-        .mono {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-
+        .mono { font-family: 'IBM Plex Mono', monospace; }
         .grid-bg {
             background-image:
                 linear-gradient(to right, #0f0f0f 1px, transparent 1px),
@@ -51,845 +36,559 @@
 
         /* ── NAV ── */
         #navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 50;
+            position: fixed; top: 0; width: 100%; z-index: 50;
             padding: 1.25rem 1.5rem;
             transition: background 0.3s, border-color 0.3s;
         }
-
-        #navbar.scrolled {
-            background: rgba(0, 0, 0, 0.96);
-            border-bottom: 1px solid #18181b;
-        }
-
+        #navbar.scrolled { background: rgba(0,0,0,0.96); border-bottom: 1px solid #18181b; }
         .nav-link {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 10px;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #71717a;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            padding-bottom: 2px;
-            transition: color 0.2s, border-color 0.2s;
-            cursor: pointer;
+            font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+            color: #71717a; text-decoration: none;
+            border-bottom: 1px solid transparent; padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s; cursor: pointer;
         }
-
-        .nav-link:hover {
-            color: #fff;
-        }
-
-        .nav-link.active {
-            color: #fff;
-            border-color: #3b82f6;
-        }
+        .nav-link:hover { color: #fff; }
+        .nav-link.active { color: #fff; border-color: #3b82f6; }
 
         /* ── PAGE SYSTEM ── */
-        .page {
-            display: none;
-        }
-
-        .page.active {
-            display: block;
-            animation: fadeUp 0.45s ease forwards;
-        }
-
-        .detail-view {
-            display: none;
-        }
-
-        .detail-view.active {
-            display: block;
-            animation: fadeUp 0.4s ease forwards;
-        }
-
+        .page { display: none; }
+        .page.active { display: block; animation: fadeUp 0.45s ease forwards; }
+        .detail-view { display: none; }
+        .detail-view.active { display: block; animation: fadeUp 0.4s ease forwards; }
         @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         /* ── REVEAL ── */
-        .reveal {
-            opacity: 0;
-            transform: translateY(22px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
 
         /* ── CARDS ── */
         .card-brief {
-            background: #09090b;
-            border: 1px solid #18181b;
+            background: #09090b; border: 1px solid #18181b;
             transition: border-color 0.3s, transform 0.3s;
             cursor: pointer;
         }
-
-        .card-brief:hover {
-            border-color: #3b82f6;
-            transform: translateY(-3px);
-        }
-
-        .card-brief:hover .card-arrow {
-            color: #3b82f6 !important;
-        }
+        .card-brief:hover { border-color: #3b82f6; transform: translateY(-3px); }
+        .card-brief:hover .card-arrow { color: #3b82f6 !important; }
 
         /* ── TAGS ── */
         .tag {
-            display: inline-block;
-            padding: 2px 8px;
-            background: #000;
-            border: 1px solid #27272a;
+            display: inline-block; padding: 2px 8px;
+            background: #000; border: 1px solid #27272a;
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #71717a;
+            font-size: 9px; text-transform: uppercase;
+            letter-spacing: 0.1em; color: #71717a;
         }
 
         /* ── TIMELINE ── */
         .tl-item {
-            border-left: 1px solid #18181b;
-            padding-left: 2rem;
-            position: relative;
-            transition: border-color 0.3s;
-            cursor: pointer;
+            border-left: 1px solid #18181b; padding-left: 2rem;
+            position: relative; transition: border-color 0.3s; cursor: pointer;
         }
-
-        .tl-item:hover {
-            border-color: #3b82f6;
-        }
-
+        .tl-item:hover { border-color: #3b82f6; }
         .tl-dot {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: #3b82f6;
-            left: -4.5px;
-            top: 6px;
-            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+            position: absolute; width: 8px; height: 8px;
+            background: #3b82f6; left: -4.5px; top: 6px;
+            box-shadow: 0 0 10px rgba(59,130,246,0.5);
             transition: transform 0.3s;
         }
-
-        .tl-item:hover .tl-dot {
-            transform: scale(1.5);
-        }
+        .tl-item:hover .tl-dot { transform: scale(1.5); }
 
         /* ── ARCH ── */
-        .arch-node {
-            border: 1px solid #27272a;
-            background: #09090b;
-            padding: 1.5rem;
-            border-radius: 2px;
-            min-width: 180px;
-        }
+        .arch-node { border: 1px solid #27272a; background: #09090b; padding: 1.5rem; border-radius: 2px; min-width: 180px; }
 
         /* ── SPEC TABLE ── */
         .spec-row {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid #18181b;
-            padding-bottom: 8px;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
+            display: flex; justify-content: space-between;
+            border-bottom: 1px solid #18181b; padding-bottom: 8px;
+            font-family: 'IBM Plex Mono', monospace; font-size: 11px;
         }
-
-        .spec-row:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
+        .spec-row:last-child { border-bottom: none; padding-bottom: 0; }
 
         /* ── MISC ANIMATIONS ── */
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1
-            }
-
-            50% {
-                opacity: .3
-            }
-        }
-
-        .pulse-dot {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes ping {
-            0% {
-                transform: scale(1);
-                opacity: 1
-            }
-
-            100% {
-                transform: scale(2.2);
-                opacity: 0
-            }
-        }
-
-        .ping {
-            animation: ping 1.5s infinite;
-        }
-
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+        .pulse-dot { animation: pulse 2s infinite; }
+        @keyframes ping { 0%{transform:scale(1);opacity:1} 100%{transform:scale(2.2);opacity:0} }
+        .ping { animation: ping 1.5s infinite; }
         .grad-text {
             background: linear-gradient(90deg, #60a5fa, #22d3ee);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
 
         /* ── PROJECT IMAGE ── */
-        .project-img {
-            width: 100%;
-            aspect-ratio: 16/9;
-            object-fit: cover;
-            border: 1px solid #18181b;
-            border-radius: 2px;
-            display: block;
-        }
-
+        .project-img { width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid #18181b; border-radius:2px; display:block; }
         .project-img-placeholder {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #09090b;
-            border: 1px solid #18181b;
-            border-radius: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #27272a;
+            width:100%; aspect-ratio:16/9; background:#09090b;
+            border:1px solid #18181b; border-radius:2px;
+            display:flex; align-items:center; justify-content:center; color:#27272a;
         }
 
         /* ── BACK BTN ── */
         .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #71717a;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            cursor: pointer;
-            transition: color 0.2s;
-            background: none;
-            border: none;
-            padding: 0;
+            display:inline-flex; align-items:center; gap:8px;
+            color:#71717a; font-family:'IBM Plex Mono',monospace;
+            font-size:11px; text-transform:uppercase; letter-spacing:0.15em;
+            cursor:pointer; transition:color 0.2s; background:none; border:none; padding:0;
         }
-
-        .back-btn:hover {
-            color: #fff;
-        }
+        .back-btn:hover { color:#fff; }
 
         /* ── SKELETON ── */
         .loading-skeleton {
-            background: linear-gradient(90deg, #09090b 25%, #18181b 50%, #09090b 75%);
+            background: linear-gradient(90deg,#09090b 25%,#18181b 50%,#09090b 75%);
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
             border-radius: 2px;
         }
-
-        @keyframes shimmer {
-            0% {
-                background-position: 200% 0
-            }
-
-            100% {
-                background-position: -200% 0
-            }
-        }
+        @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
         /* ── SCROLLBAR ── */
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #000;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #27272a;
-            border-radius: 2px;
-        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 2px; }
 
         @media (max-width:700px) {
-            .detail-grid {
-                grid-template-columns: 1fr !important;
-            }
-
-            .nav-links {
-                gap: 1rem !important;
-            }
+            .detail-grid { grid-template-columns:1fr !important; }
+            .nav-links { gap:1rem !important; }
         }
     </style>
 </head>
-
 <body class="grid-bg">
 
-    <!-- ════════ NAV ════════ -->
-    <nav id="navbar">
-        <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
-            <div onclick="navigate('home')" style="display:flex;align-items:center;gap:12px;cursor:pointer;">
-                <div
-                    style="width:40px;height:40px;background:#fff;color:#000;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:2px;font-family:'IBM Plex Mono',monospace;flex-shrink:0;">
-                    A</div>
-                <div>
-                    <div class="mono"
-                        style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">ALAF
-                        RAMADHAN</div>
-                    <div class="mono"
-                        style="font-size:9px;color:#3b82f6;letter-spacing:0.2em;text-transform:uppercase;">
-                        Systems_Engineer</div>
-                </div>
-            </div>
-            <div class="nav-links" style="display:flex;align-items:center;gap:2rem;">
-                <span class="nav-link active" id="nav-home" onclick="navigate('home')">Home</span>
-                <span class="nav-link" id="nav-case-studies" onclick="navigate('case-studies')">Case_Studies</span>
-                <span class="nav-link" id="nav-architecture" onclick="navigate('architecture')">Architecture</span>
-                <span class="nav-link" id="nav-experience" onclick="navigate('experience')">Experience</span>
-                <span class="nav-link" id="nav-contact" onclick="navigate('contact')">Contact</span>
+<!-- ════════ NAV ════════ -->
+<nav id="navbar">
+    <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+        <div onclick="navigate('home')" style="display:flex;align-items:center;gap:12px;cursor:pointer;">
+            <div style="width:40px;height:40px;background:#fff;color:#000;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:2px;font-family:'IBM Plex Mono',monospace;flex-shrink:0;">A</div>
+            <div>
+                <div class="mono" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">ALAF RAMADHAN</div>
+                <div class="mono" style="font-size:9px;color:#3b82f6;letter-spacing:0.2em;text-transform:uppercase;">Systems_Engineer</div>
             </div>
         </div>
+        <div class="nav-links" style="display:flex;align-items:center;gap:2rem;">
+            <span class="nav-link active" id="nav-home"         onclick="navigate('home')">Home</span>
+            <span class="nav-link"        id="nav-case-studies" onclick="navigate('case-studies')">Case_Studies</span>
+            <span class="nav-link"        id="nav-architecture" onclick="navigate('architecture')">Architecture</span>
+            <span class="nav-link"        id="nav-experience"   onclick="navigate('experience')">Experience</span>
+            <span class="nav-link"        id="nav-contact"      onclick="navigate('contact')">Contact</span>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ════════ PAGE: HOME ════════ -->
+<div id="page-home" class="page active" style="max-width:1280px;margin:0 auto;padding:10rem 1.5rem 6rem;">
+    <section style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;max-width:900px;gap:2rem;">
+        <div style="display:inline-flex;align-items:center;padding:6px 16px;border-radius:999px;border:1px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.08);color:#60a5fa;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.15em;width:fit-content;">
+            <span class="pulse-dot" style="width:7px;height:7px;border-radius:50%;background:#3b82f6;margin-right:8px;display:inline-block;"></span>
+            SYSTEM_STATUS: NOMINAL &nbsp;|&nbsp; LOCATION: SEI MANGKE
+        </div>
+        <h1 style="font-size:clamp(3rem,9vw,6rem);font-weight:700;letter-spacing:-0.04em;line-height:1;margin:0;">
+            Building Reliable <span class="grad-text">Industrial Systems</span>.
+        </h1>
+        <p class="mono" style="font-size:1.1rem;color:#71717a;line-height:1.7;max-width:600px;">
+            Bridging Edge Intelligence with Enterprise Cloud Infrastructure.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;padding-top:1.5rem;">
+            <button onclick="navigate('case-studies')"
+                style="padding:14px 28px;background:#fff;color:#000;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;border:none;border-radius:2px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background 0.3s,color 0.3s;"
+                onmouseover="this.style.background='#60a5fa';this.style.color='#fff'"
+                onmouseout="this.style.background='#fff';this.style.color='#000'">
+                Technical Case Studies <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+            </button>
+            <a href="src/cv/alaframadhancv.pdf" download
+                style="padding:14px 28px;border:1px solid #27272a;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;border-radius:2px;display:flex;align-items:center;gap:8px;text-decoration:none;transition:background 0.3s,color 0.3s;"
+                onmouseover="this.style.background='#fff';this.style.color='#000'"
+                onmouseout="this.style.background='transparent';this.style.color='#fff'">
+                Download CV <i data-lucide="download" style="width:14px;height:14px;"></i>
+            </a>
+            <button onclick="navigate('contact')"
+                style="padding:14px 28px;border:1px solid rgba(59,130,246,0.4);color:#60a5fa;background:rgba(59,130,246,0.08);font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;border-radius:2px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all 0.3s;"
+                onmouseover="this.style.background='#3b82f6';this.style.color='#fff';this.style.borderColor='#3b82f6'"
+                onmouseout="this.style.background='rgba(59,130,246,0.08)';this.style.color='#60a5fa';this.style.borderColor='rgba(59,130,246,0.4)'">
+                Contact Me <i data-lucide="send" style="width:14px;height:14px;"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:8rem;">
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+            <h2 class="mono" style="font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;display:flex;align-items:center;gap:10px;color:#fff;margin:0;">
+                <i data-lucide="terminal" style="color:#3b82f6;width:20px;height:20px;"></i> Profile_Brief
+            </h2>
+            <div style="display:flex;flex-direction:column;gap:1rem;color:#71717a;line-height:1.8;font-size:1.05rem;">
+                <p style="margin:0;">I am an <strong style="color:#fff;">Industrial IT and Infrastructure Engineer</strong> specialized in integrating physical hardware with secure digital platforms.</p>
+                <p style="margin:0;">My focus is on reliability, uptime, and architectural clarity in high-pressure production environments.</p>
+            </div>
+        </div>
+        <div style="background:#09090b;border:1px solid #18181b;padding:2rem;border-radius:2px;">
+            <div class="mono" style="color:#3b82f6;font-size:10px;font-weight:700;letter-spacing:0.2em;margin-bottom:1.5rem;">>> OPERATIONAL_PROFILE</div>
+            <div style="display:flex;flex-direction:column;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;">
+                <div class="spec-row"><span style="color:#52525b;text-transform:uppercase;">Current_Org</span><span>Unilever Oleochemical</span></div>
+                <div class="spec-row"><span style="color:#52525b;text-transform:uppercase;">Primary_Focus</span><span>Edge-to-Cloud Integration</span></div>
+                <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;">
+                    <span style="color:#52525b;text-transform:uppercase;">System_State</span>
+                    <span style="color:#22c55e;display:flex;align-items:center;gap:6px;">
+                        <span class="ping" style="width:6px;height:6px;border-radius:50%;background:#22c55e;display:inline-block;"></span> ONLINE
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- ════════ PAGE: CASE STUDIES ════════ -->
+<div id="page-case-studies" class="page" style="max-width:1280px;margin:0 auto;padding:8rem 1.5rem 6rem;">
+    <div style="max-width:700px;margin-bottom:4rem;">
+        <h2 class="mono" style="font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 8px;">Case_Study_Repository</h2>
+        <p class="mono" style="color:#52525b;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin:0;">Deep dives into industrial deployments.</p>
+    </div>
+    <div id="projects-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem;">
+        <div class="loading-skeleton" style="height:280px;"></div>
+        <div class="loading-skeleton" style="height:280px;"></div>
+        <div class="loading-skeleton" style="height:280px;"></div>
+    </div>
+</div>
+
+
+<!-- ════════ DETAIL: PROJECT (single dynamic container) ════════ -->
+<div id="detail-project" class="detail-view" style="max-width:960px;margin:0 auto;padding:8rem 1.5rem 6rem;">
+    <nav style="margin-bottom:3rem;">
+        <button class="back-btn" onclick="backTo('case-studies')">
+            <i data-lucide="arrow-left" style="width:14px;height:14px;"></i> BACK_TO_REPOSITORY
+        </button>
     </nav>
+    <div id="detail-project-content"></div>
+</div>
 
 
-    <!-- ════════ PAGE: HOME ════════ -->
-    <div id="page-home" class="page active" style="max-width:1280px;margin:0 auto;padding:10rem 1.5rem 6rem;">
-        <section
-            style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;max-width:900px;gap:2rem;">
-            <div
-                style="display:inline-flex;align-items:center;padding:6px 16px;border-radius:999px;border:1px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.08);color:#60a5fa;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.15em;width:fit-content;">
-                <span class="pulse-dot"
-                    style="width:7px;height:7px;border-radius:50%;background:#3b82f6;margin-right:8px;display:inline-block;"></span>
-                SYSTEM_STATUS: NOMINAL &nbsp;|&nbsp; LOCATION: SEI MANGKE
-            </div>
-            <h1 style="font-size:clamp(3rem,9vw,6rem);font-weight:700;letter-spacing:-0.04em;line-height:1;margin:0;">
-                Building Reliable <span class="grad-text">Industrial Systems</span>.
-            </h1>
-            <p class="mono" style="font-size:1.1rem;color:#71717a;line-height:1.7;max-width:600px;">
-                Bridging Edge Intelligence with Enterprise Cloud Infrastructure.
-            </p>
-            <div style="display:flex;flex-wrap:wrap;gap:1rem;padding-top:1.5rem;">
-                <button onclick="navigate('case-studies')"
-                    style="padding:14px 28px;background:#fff;color:#000;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;border:none;border-radius:2px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background 0.3s,color 0.3s;"
-                    onmouseover="this.style.background='#60a5fa';this.style.color='#fff'"
-                    onmouseout="this.style.background='#fff';this.style.color='#000'">
-                    Technical Case Studies <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
-                </button>
-                <a href="src/cv/alaframadhancv.pdf" download
-                    style="padding:14px 28px;border:1px solid #27272a;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;border-radius:2px;display:flex;align-items:center;gap:8px;text-decoration:none;transition:background 0.3s,color 0.3s;"
-                    onmouseover="this.style.background='#fff';this.style.color='#000'"
-                    onmouseout="this.style.background='transparent';this.style.color='#fff'">
-                    Download CV <i data-lucide="download" style="width:14px;height:14px;"></i>
-                </a>
-            </div>
-        </section>
+<!-- ════════ PAGE: ARCHITECTURE ════════ -->
+<div id="page-architecture" class="page" style="max-width:1280px;margin:0 auto;padding:8rem 1.5rem 6rem;">
+    <h2 class="mono" style="font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 3rem;">System_Blueprint</h2>
 
-        <section class="reveal"
-            style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:8rem;">
-            <div style="display:flex;flex-direction:column;gap:1.5rem;">
-                <h2 class="mono"
-                    style="font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;display:flex;align-items:center;gap:10px;color:#fff;margin:0;">
-                    <i data-lucide="terminal" style="color:#3b82f6;width:20px;height:20px;"></i> Profile_Brief
-                </h2>
-                <div
-                    style="display:flex;flex-direction:column;gap:1rem;color:#71717a;line-height:1.8;font-size:1.05rem;">
-                    <p style="margin:0;">I am an <strong style="color:#fff;">Industrial IT and Infrastructure
-                            Engineer</strong> specialized in integrating physical hardware with secure digital
-                        platforms.</p>
-                    <p style="margin:0;">My focus is on reliability, uptime, and architectural clarity in high-pressure
-                        production environments.</p>
-                </div>
+    <div style="background:#09090b;border:1px solid #18181b;padding:3rem;border-radius:2px;margin-bottom:3rem;overflow-x:auto;">
+        <div style="min-width:760px;display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+            <div class="arch-node">
+                <div class="mono" style="color:#f97316;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">Edge_Level</div>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:8px;">Sensors & MCUs</div>
+                <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">Arduino</span><span class="tag">ESP32</span><span class="tag">ATmega328</span></div>
             </div>
-            <div style="background:#09090b;border:1px solid #18181b;padding:2rem;border-radius:2px;">
-                <div class="mono"
-                    style="color:#3b82f6;font-size:10px;font-weight:700;letter-spacing:0.2em;margin-bottom:1.5rem;">>>
-                    OPERATIONAL_PROFILE</div>
-                <div
-                    style="display:flex;flex-direction:column;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;">
-                    <div class="spec-row"><span
-                            style="color:#52525b;text-transform:uppercase;">Current_Org</span><span>Unilever
-                            Oleochemical</span></div>
-                    <div class="spec-row"><span
-                            style="color:#52525b;text-transform:uppercase;">Primary_Focus</span><span>Edge-to-Cloud
-                            Integration</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;">
-                        <span style="color:#52525b;text-transform:uppercase;">System_State</span>
-                        <span style="color:#22c55e;display:flex;align-items:center;gap:6px;">
-                            <span class="ping"
-                                style="width:6px;height:6px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
-                            ONLINE
-                        </span>
+            <div style="color:#27272a;font-size:1.5rem;">&#8594;</div>
+            <div class="arch-node">
+                <div class="mono" style="color:#3b82f6;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">Protocol_Layer</div>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:8px;">Modbus RTU / MQTT</div>
+                <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">RS485</span><span class="tag">RS232</span><span class="tag">I2C / SPI</span></div>
+            </div>
+            <div style="color:#27272a;font-size:1.5rem;">&#8594;</div>
+            <div class="arch-node">
+                <div class="mono" style="color:#22d3ee;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">Gateway</div>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:8px;">Edge Processing</div>
+                <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">Raspberry Pi</span><span class="tag">NGINX</span><span class="tag">Node-RED</span></div>
+            </div>
+            <div style="color:#27272a;font-size:1.5rem;">&#8594;</div>
+            <div class="arch-node">
+                <div class="mono" style="color:#a78bfa;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">Cloud</div>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:8px;">Enterprise Infrastructure</div>
+                <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">AWS IoT</span><span class="tag">Lambda</span><span class="tag">Entra ID</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <div style="background:#09090b;border:1px solid #18181b;padding:2rem;border-radius:2px;">
+            <div class="mono" style="color:#3b82f6;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1.2rem;">>> DESIGN_PRINCIPLES</div>
+            <div style="display:flex;flex-direction:column;gap:12px;color:#71717a;font-size:0.9rem;line-height:1.6;">
+                <div style="display:flex;gap:14px;"><span class="mono" style="color:#27272a;">01</span><span>Fault-tolerant edge nodes with local buffering and retry logic.</span></div>
+                <div style="display:flex;gap:14px;"><span class="mono" style="color:#27272a;">02</span><span>Encrypted transport using TLS 1.3 from device to cloud.</span></div>
+                <div style="display:flex;gap:14px;"><span class="mono" style="color:#27272a;">03</span><span>Role-based access control via Microsoft Entra ID integration.</span></div>
+                <div style="display:flex;gap:14px;"><span class="mono" style="color:#27272a;">04</span><span>Stateless Lambda functions for horizontal scalability.</span></div>
+            </div>
+        </div>
+        <div style="background:#09090b;border:1px solid #18181b;padding:2rem;border-radius:2px;">
+            <div class="mono" style="color:#22d3ee;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1.2rem;">>> STACK_OVERVIEW</div>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+                <div class="spec-row"><span style="color:#52525b;">Firmware</span><span>C++ / Arduino Framework</span></div>
+                <div class="spec-row"><span style="color:#52525b;">Protocol</span><span>Modbus RTU, MQTT</span></div>
+                <div class="spec-row"><span style="color:#52525b;">Cloud</span><span>AWS IoT, Lambda, S3</span></div>
+                <div class="spec-row"><span style="color:#52525b;">Identity</span><span>Microsoft Entra ID</span></div>
+                <div class="spec-row" style="border-bottom:none;padding-bottom:0;"><span style="color:#52525b;">ERP</span><span>SAP S/4HANA</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ════════ PAGE: EXPERIENCE ════════ -->
+<div id="page-experience" class="page" style="max-width:1280px;margin:0 auto;padding:8rem 1.5rem 6rem;">
+    <h2 class="mono" style="font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 4rem;">Work_Timeline</h2>
+    <!-- Timeline items injected by JS -->
+    <div id="experience-timeline" style="display:flex;flex-direction:column;gap:3rem;">
+        <div class="loading-skeleton" style="height:120px;border-radius:2px;"></div>
+        <div class="loading-skeleton" style="height:120px;border-radius:2px;"></div>
+        <div class="loading-skeleton" style="height:120px;border-radius:2px;"></div>
+    </div>
+</div>
+
+<!-- DETAIL: EXPERIENCE (single dynamic container) -->
+<div id="detail-experience" class="detail-view" style="max-width:900px;margin:0 auto;padding:8rem 1.5rem 6rem;">
+    <nav style="margin-bottom:3rem;">
+        <button class="back-btn" onclick="backTo('experience')">
+            <i data-lucide="arrow-left" style="width:14px;height:14px;"></i> BACK_TO_SYSTEM
+        </button>
+    </nav>
+    <div id="detail-experience-content"></div>
+</div>
+
+
+<!-- ════════ PAGE: CONTACT ════════ -->
+<div id="page-contact" class="page" style="max-width:1280px;margin:0 auto;padding:8rem 1.5rem 6rem;">
+
+    <div style="max-width:700px;margin-bottom:5rem;">
+        <div class="mono" style="font-size:10px;color:#3b82f6;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1rem;">TRANSMISSION_OPEN</div>
+        <h2 class="mono" style="font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 1rem;">Get_In_Touch</h2>
+        <p style="color:#71717a;line-height:1.8;margin:0;font-size:1.05rem;">
+            Available for engineering collaborations, infrastructure projects, and technical consultations.
+            Reach out through any channel below.
+        </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+
+        <!-- LEFT: IDENTITY CARD -->
+        <div class="reveal">
+            <div style="background:#09090b;border:1px solid #18181b;padding:2.5rem;border-radius:2px;">
+                <div class="mono" style="color:#3b82f6;font-size:10px;font-weight:700;letter-spacing:0.2em;margin-bottom:2rem;">>> IDENTITY_RECORD</div>
+
+                <div style="display:flex;flex-direction:column;gap:0;">
+                    <div style="padding:1rem 0;border-bottom:1px solid #18181b;">
+                        <div class="mono" style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:4px;">Full_Name</div>
+                        <div style="color:#fff;font-size:1rem;font-weight:600;">Muhammad Alaf Ramadhan</div>
                     </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-
-    <!-- ════════ PAGE: CASE STUDIES ════════ -->
-    <div id="page-case-studies" class="page" style="max-width:1280px;margin:0 auto;padding:8rem 1.5rem 6rem;">
-        <div style="max-width:700px;margin-bottom:4rem;">
-            <h2 class="mono"
-                style="font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 8px;">
-                Case_Study_Repository</h2>
-            <p class="mono"
-                style="color:#52525b;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin:0;">Deep dives
-                into industrial deployments.</p>
-        </div>
-        <div id="projects-grid"
-            style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem;">
-            <div class="loading-skeleton" style="height:280px;"></div>
-            <div class="loading-skeleton" style="height:280px;"></div>
-            <div class="loading-skeleton" style="height:280px;"></div>
-        </div>
-    </div>
-
-
-    <!-- ════════ DETAIL: PROJECT (single dynamic container) ════════ -->
-    <div id="detail-project" class="detail-view" style="max-width:960px;margin:0 auto;padding:8rem 1.5rem 6rem;">
-        <nav style="margin-bottom:3rem;">
-            <button class="back-btn" onclick="backTo('case-studies')">
-                <i data-lucide="arrow-left" style="width:14px;height:14px;"></i> BACK_TO_REPOSITORY
-            </button>
-        </nav>
-        <div id="detail-project-content"></div>
-    </div>
-
-
-    <!-- ════════ PAGE: ARCHITECTURE ════════ -->
-    <div id="page-architecture" class="page" style="max-width:1280px;margin:0 auto;padding:8rem 1.5rem 6rem;">
-        <h2 class="mono"
-            style="font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 3rem;">
-            System_Blueprint</h2>
-
-        <div
-            style="background:#09090b;border:1px solid #18181b;padding:3rem;border-radius:2px;margin-bottom:3rem;overflow-x:auto;">
-            <div style="min-width:760px;display:flex;justify-content:space-between;align-items:center;gap:1rem;">
-                <div class="arch-node">
-                    <div class="mono"
-                        style="color:#f97316;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">
-                        Edge_Level</div>
-                    <div style="font-weight:700;font-size:0.9rem;margin-bottom:8px;">Sensors & MCUs</div>
-                    <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">Arduino</span><span
-                            class="tag">ESP32</span><span class="tag">ATmega328</span></div>
-                </div>
-                <div style="color:#27272a;font-size:1.5rem;">&#8594;</div>
-                <div class="arch-node">
-                    <div class="mono"
-                        style="color:#3b82f6;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">
-                        Protocol_Layer</div>
-                    <div style="font-weight:700;font-size:0.9rem;margin-bottom:8px;">Modbus RTU / MQTT</div>
-                    <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">RS485</span><span
-                            class="tag">RS232</span><span class="tag">I2C / SPI</span></div>
-                </div>
-                <div style="color:#27272a;font-size:1.5rem;">&#8594;</div>
-                <div class="arch-node">
-                    <div class="mono"
-                        style="color:#22d3ee;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">
-                        Gateway</div>
-                    <div style="font-weight:700;font-size:0.9rem;margin-bottom:8px;">Edge Processing</div>
-                    <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">Raspberry Pi</span><span
-                            class="tag">NGINX</span><span class="tag">Node-RED</span></div>
-                </div>
-                <div style="color:#27272a;font-size:1.5rem;">&#8594;</div>
-                <div class="arch-node">
-                    <div class="mono"
-                        style="color:#a78bfa;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">
-                        Cloud</div>
-                    <div style="font-weight:700;font-size:0.9rem;margin-bottom:8px;">Enterprise Infrastructure</div>
-                    <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">AWS IoT</span><span
-                            class="tag">Lambda</span><span class="tag">Entra ID</span></div>
-                </div>
-            </div>
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
-            <div style="background:#09090b;border:1px solid #18181b;padding:2rem;border-radius:2px;">
-                <div class="mono"
-                    style="color:#3b82f6;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1.2rem;">
-                    >> DESIGN_PRINCIPLES</div>
-                <div
-                    style="display:flex;flex-direction:column;gap:12px;color:#71717a;font-size:0.9rem;line-height:1.6;">
-                    <div style="display:flex;gap:14px;"><span class="mono"
-                            style="color:#27272a;">01</span><span>Fault-tolerant edge nodes with local buffering and
-                            retry logic.</span></div>
-                    <div style="display:flex;gap:14px;"><span class="mono"
-                            style="color:#27272a;">02</span><span>Encrypted transport using TLS 1.3 from device to
-                            cloud.</span></div>
-                    <div style="display:flex;gap:14px;"><span class="mono"
-                            style="color:#27272a;">03</span><span>Role-based access control via Microsoft Entra ID
-                            integration.</span></div>
-                    <div style="display:flex;gap:14px;"><span class="mono"
-                            style="color:#27272a;">04</span><span>Stateless Lambda functions for horizontal
-                            scalability.</span></div>
-                </div>
-            </div>
-            <div style="background:#09090b;border:1px solid #18181b;padding:2rem;border-radius:2px;">
-                <div class="mono"
-                    style="color:#22d3ee;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1.2rem;">
-                    >> STACK_OVERVIEW</div>
-                <div style="display:flex;flex-direction:column;gap:10px;">
-                    <div class="spec-row"><span style="color:#52525b;">Firmware</span><span>C++ / Arduino
-                            Framework</span></div>
-                    <div class="spec-row"><span style="color:#52525b;">Protocol</span><span>Modbus RTU, MQTT</span>
+                    <div style="padding:1rem 0;border-bottom:1px solid #18181b;">
+                        <div class="mono" style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:4px;">Known_As</div>
+                        <div style="color:#fff;font-size:1rem;font-weight:600;">Alaf Ramadhan</div>
                     </div>
-                    <div class="spec-row"><span style="color:#52525b;">Cloud</span><span>AWS IoT, Lambda, S3</span>
+                    <div style="padding:1rem 0;border-bottom:1px solid #18181b;">
+                        <div class="mono" style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:4px;">Role</div>
+                        <div style="color:#60a5fa;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;">Industrial IT & Infrastructure Engineer</div>
                     </div>
-                    <div class="spec-row"><span style="color:#52525b;">Identity</span><span>Microsoft Entra ID</span>
-                    </div>
-                    <div class="spec-row" style="border-bottom:none;padding-bottom:0;"><span
-                            style="color:#52525b;">ERP</span><span>SAP S/4HANA</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ════════ PAGE: EXPERIENCE ════════ -->
-    <div id="page-experience" class="page" style="max-width:1280px;margin:0 auto;padding:8rem 1.5rem 6rem;">
-        <h2 class="mono"
-            style="font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 4rem;">
-            Work_Timeline</h2>
-        <!-- Timeline items injected by JS -->
-        <div id="experience-timeline" style="display:flex;flex-direction:column;gap:3rem;">
-            <div class="loading-skeleton" style="height:120px;border-radius:2px;"></div>
-            <div class="loading-skeleton" style="height:120px;border-radius:2px;"></div>
-            <div class="loading-skeleton" style="height:120px;border-radius:2px;"></div>
-        </div>
-    </div>
-
-    <!-- DETAIL: EXPERIENCE (single dynamic container) -->
-    <div id="detail-experience" class="detail-view" style="max-width:900px;margin:0 auto;padding:8rem 1.5rem 6rem;">
-        <nav style="margin-bottom:3rem;">
-            <button class="back-btn" onclick="backTo('experience')">
-                <i data-lucide="arrow-left" style="width:14px;height:14px;"></i> BACK_TO_SYSTEM
-            </button>
-        </nav>
-        <div id="detail-experience-content"></div>
-    </div>
-
-
-    <!-- ════════ PAGE: CONTACT ════════ -->
-    <div id="page-contact" class="page" style="max-width:1280px;margin:0 auto;padding:8rem 1.5rem 6rem;">
-
-        <div style="max-width:700px;margin-bottom:5rem;">
-            <div class="mono"
-                style="font-size:10px;color:#3b82f6;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1rem;">
-                TRANSMISSION_OPEN</div>
-            <h2 class="mono"
-                style="font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 1rem;">
-                Get_In_Touch</h2>
-            <p style="color:#71717a;line-height:1.8;margin:0;font-size:1.05rem;">
-                Available for engineering collaborations, infrastructure projects, and technical consultations.
-                Reach out through any channel below.
-            </p>
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
-
-            <!-- LEFT: IDENTITY CARD -->
-            <div class="reveal">
-                <div style="background:#09090b;border:1px solid #18181b;padding:2.5rem;border-radius:2px;">
-                    <div class="mono"
-                        style="color:#3b82f6;font-size:10px;font-weight:700;letter-spacing:0.2em;margin-bottom:2rem;">>>
-                        IDENTITY_RECORD</div>
-
-                    <div style="display:flex;flex-direction:column;gap:0;">
-                        <div style="padding:1rem 0;border-bottom:1px solid #18181b;">
-                            <div class="mono"
-                                style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:4px;">
-                                Full_Name</div>
-                            <div style="color:#fff;font-size:1rem;font-weight:600;">Muhammad Alaf Ramadhan</div>
-                        </div>
-                        <div style="padding:1rem 0;border-bottom:1px solid #18181b;">
-                            <div class="mono"
-                                style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:4px;">
-                                Known_As</div>
-                            <div style="color:#fff;font-size:1rem;font-weight:600;">Alaf Ramadhan</div>
-                        </div>
-                        <div style="padding:1rem 0;border-bottom:1px solid #18181b;">
-                            <div class="mono"
-                                style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:4px;">
-                                Role</div>
-                            <div style="color:#60a5fa;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;">
-                                Industrial IT & Infrastructure Engineer</div>
-                        </div>
-                        <div style="padding:1rem 0;">
-                            <div class="mono"
-                                style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:4px;">
-                                Location</div>
-                            <div style="color:#fff;font-size:0.9rem;display:flex;align-items:center;gap:6px;">
-                                <i data-lucide="map-pin"
-                                    style="width:13px;height:13px;color:#3b82f6;flex-shrink:0;"></i>
-                                Sei Mangke, North Sumatera, Indonesia
-                            </div>
+                    <div style="padding:1rem 0;">
+                        <div class="mono" style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:4px;">Location</div>
+                        <div style="color:#fff;font-size:0.9rem;display:flex;align-items:center;gap:6px;">
+                            <i data-lucide="map-pin" style="width:13px;height:13px;color:#3b82f6;flex-shrink:0;"></i>
+                            Sei Mangke, North Sumatera, Indonesia
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- RIGHT: CONTACT CHANNELS -->
-            <div class="reveal" style="display:flex;flex-direction:column;gap:1rem;">
-
-                <!-- Email -->
-                <a href="mailto:alaf.bussiness@gmail.com"
-                    style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:#09090b;border:1px solid #18181b;border-radius:2px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;"
-                    onmouseover="this.style.borderColor='#3b82f6';this.style.transform='translateY(-2px)'"
-                    onmouseout="this.style.borderColor='#18181b';this.style.transform='translateY(0)'">
-                    <div
-                        style="width:42px;height:42px;background:#18181b;border:1px solid #27272a;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <i data-lucide="mail" style="width:18px;height:18px;color:#3b82f6;"></i>
-                    </div>
-                    <div style="flex:1;min-width:0;">
-                        <div class="mono"
-                            style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">
-                            Email</div>
-                        <div
-                            style="color:#fff;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
-                            alaf.bussiness@gmail.com</div>
-                    </div>
-                    <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:#27272a;flex-shrink:0;"></i>
-                </a>
-
-                <!-- LinkedIn -->
-                <a href="https://linkedin.com/in/alaf-ramadhan/" target="_blank" rel="noopener"
-                    style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:#09090b;border:1px solid #18181b;border-radius:2px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;"
-                    onmouseover="this.style.borderColor='#0a66c2';this.style.transform='translateY(-2px)'"
-                    onmouseout="this.style.borderColor='#18181b';this.style.transform='translateY(0)'">
-                    <div
-                        style="width:42px;height:42px;background:#18181b;border:1px solid #27272a;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#0a66c2">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                            <rect x="2" y="9" width="4" height="12" />
-                            <circle cx="4" cy="4" r="2" />
-                        </svg>
-                    </div>
-                    <div style="flex:1;min-width:0;">
-                        <div class="mono"
-                            style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">
-                            LinkedIn</div>
-                        <div style="color:#fff;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;">
-                            linkedin.com/in/alaf-ramadhan</div>
-                    </div>
-                    <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:#27272a;flex-shrink:0;"></i>
-                </a>
-
-                <!-- WhatsApp -->
-                <a href="https://wa.me/6281397133353" target="_blank" rel="noopener"
-                    style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:#09090b;border:1px solid #18181b;border-radius:2px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;"
-                    onmouseover="this.style.borderColor='#22c55e';this.style.transform='translateY(-2px)'"
-                    onmouseout="this.style.borderColor='#18181b';this.style.transform='translateY(0)'">
-                    <div
-                        style="width:42px;height:42px;background:#18181b;border:1px solid #27272a;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                        </svg>
-                    </div>
-                    <div style="flex:1;min-width:0;">
-                        <div class="mono"
-                            style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">
-                            WhatsApp</div>
-                        <div style="color:#fff;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;">+62
-                            813-9713-3353</div>
-                    </div>
-                    <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:#27272a;flex-shrink:0;"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a href="https://instagram.com/alaf_ramadhan" target="_blank" rel="noopener"
-                    style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:#09090b;border:1px solid #18181b;border-radius:2px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;"
-                    onmouseover="this.style.borderColor='#e1306c';this.style.transform='translateY(-2px)'"
-                    onmouseout="this.style.borderColor='#18181b';this.style.transform='translateY(0)'">
-                    <div
-                        style="width:42px;height:42px;background:#18181b;border:1px solid #27272a;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                        </svg>
-                    </div>
-                    <div style="flex:1;min-width:0;">
-                        <div class="mono"
-                            style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">
-                            Instagram</div>
-                        <div style="color:#fff;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;">@alaf_ramadhan
-                        </div>
-                    </div>
-                    <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:#27272a;flex-shrink:0;"></i>
-                </a>
-
-            </div>
         </div>
 
-        <!-- BOTTOM STATUS BAR -->
-        <div class="reveal"
-            style="margin-top:4rem;padding:1.5rem 2rem;background:#09090b;border:1px solid #18181b;border-radius:2px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
-            <div style="display:flex;align-items:center;gap:10px;">
-                <span class="ping"
-                    style="width:6px;height:6px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
-                <span class="mono"
-                    style="color:#71717a;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;">Currently
-                    available for new projects</span>
-            </div>
-            <div class="mono" style="color:#27272a;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;">
-                Response within 24h</div>
-        </div>
+        <!-- RIGHT: CONTACT CHANNELS -->
+        <div class="reveal" style="display:flex;flex-direction:column;gap:1rem;">
 
+            <!-- Email -->
+            <a href="/cdn-cgi/l/email-protection#95f4f9f4f3bbf7e0e6e6fcfbf0e6e6d5f2f8f4fcf9bbf6faf8" style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:#09090b;border:1px solid #18181b;border-radius:2px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='#3b82f6';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#18181b';this.style.transform='translateY(0)'">
+                <div style="width:42px;height:42px;background:#18181b;border:1px solid #27272a;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i data-lucide="mail" style="width:18px;height:18px;color:#3b82f6;"></i>
+                </div>
+                <div style="flex:1;min-width:0;">
+                    <div class="mono" style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">Email</div>
+                    <div style="color:#fff;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"><span class="__cf_email__" data-cfemail="badbd6dbdc94d8cfc9c9d3d4dfc9c9faddd7dbd3d694d9d5d7">[email&#160;protected]</span></div>
+                </div>
+                <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:#27272a;flex-shrink:0;"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/alaf-ramadhan/" target="_blank" rel="noopener"
+               style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:#09090b;border:1px solid #18181b;border-radius:2px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;"
+               onmouseover="this.style.borderColor='#0a66c2';this.style.transform='translateY(-2px)'"
+               onmouseout="this.style.borderColor='#18181b';this.style.transform='translateY(0)'">
+                <div style="width:42px;height:42px;background:#18181b;border:1px solid #27272a;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#0a66c2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;">
+                    <div class="mono" style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">LinkedIn</div>
+                    <div style="color:#fff;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;">linkedin.com/in/alaf-ramadhan</div>
+                </div>
+                <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:#27272a;flex-shrink:0;"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6281397133353" target="_blank" rel="noopener"
+               style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:#09090b;border:1px solid #18181b;border-radius:2px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;"
+               onmouseover="this.style.borderColor='#22c55e';this.style.transform='translateY(-2px)'"
+               onmouseout="this.style.borderColor='#18181b';this.style.transform='translateY(0)'">
+                <div style="width:42px;height:42px;background:#18181b;border:1px solid #27272a;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;">
+                    <div class="mono" style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">WhatsApp</div>
+                    <div style="color:#fff;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;">+62 813-9713-3353</div>
+                </div>
+                <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:#27272a;flex-shrink:0;"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/alaf_ramadhan" target="_blank" rel="noopener"
+               style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:#09090b;border:1px solid #18181b;border-radius:2px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;"
+               onmouseover="this.style.borderColor='#e1306c';this.style.transform='translateY(-2px)'"
+               onmouseout="this.style.borderColor='#18181b';this.style.transform='translateY(0)'">
+                <div style="width:42px;height:42px;background:#18181b;border:1px solid #27272a;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;">
+                    <div class="mono" style="color:#52525b;font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">Instagram</div>
+                    <div style="color:#fff;font-size:0.9rem;font-family:'IBM Plex Mono',monospace;">@alaf_ramadhan</div>
+                </div>
+                <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:#27272a;flex-shrink:0;"></i>
+            </a>
+
+        </div>
     </div>
 
-
-    <!-- ════════ FOOTER ════════ -->
-    <footer style="border-top:1px solid #0a0a0a;padding:3rem 1.5rem;">
-        <div
-            style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
-            <div class="mono" style="font-size:10px;color:#3f3f46;text-transform:uppercase;letter-spacing:0.15em;">
-                &#169; 2025 ALAF RAMADHAN</div>
-            <div style="display:flex;gap:2rem;">
-                <a href="https://linkedin.com/in/alaf-ramadhan/" target="_blank" class="mono"
-                    style="font-size:10px;color:#3f3f46;text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color 0.2s;"
-                    onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#3f3f46'">LinkedIn</a>
-                <a href="/cdn-cgi/l/email-protection#d899b4b9bef6baadababb1b6bdabab98bfb5b9b1b4f6bbb7b5" class="mono"
-                    style="font-size:10px;color:#3f3f46;text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color 0.2s;"
-                    onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#3f3f46'">Email</a>
-            </div>
+    <!-- BOTTOM STATUS BAR -->
+    <div class="reveal" style="margin-top:4rem;padding:1.5rem 2rem;background:#09090b;border:1px solid #18181b;border-radius:2px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <div style="display:flex;align-items:center;gap:10px;">
+            <span class="ping" style="width:6px;height:6px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+            <span class="mono" style="color:#71717a;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;">Currently available for new projects</span>
         </div>
-    </footer>
+        <div class="mono" style="color:#27272a;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;">Response within 24h</div>
+    </div>
+
+</div>
 
 
-    <!-- ════════════════════════════════════════
+<!-- ════════ FOOTER ════════ -->
+<footer style="border-top:1px solid #0a0a0a;padding:3rem 1.5rem;">
+    <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+        <div class="mono" style="font-size:10px;color:#3f3f46;text-transform:uppercase;letter-spacing:0.15em;">&#169; 2025 ALAF RAMADHAN</div>
+        <div style="display:flex;gap:2rem;">
+            <a href="https://linkedin.com/in/alaf-ramadhan/" target="_blank" class="mono"
+               style="font-size:10px;color:#3f3f46;text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color 0.2s;"
+               onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#3f3f46'">LinkedIn</a>
+            <a href="/cdn-cgi/l/email-protection#d899b4b9bef6baadababb1b6bdabab98bfb5b9b1b4f6bbb7b5" class="mono" style="font-size:10px;color:#3f3f46;text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#3f3f46'">Email</a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════
      JAVASCRIPT
 ════════════════════════════════════════ -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
-        // ─────────────────────────────────
-        //  CONFIG
-        // ─────────────────────────────────
-        const DATA_URL = '/data-study-case.json';
-        let projectsData = [];
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ─────────────────────────────────
+//  CONFIG
+// ─────────────────────────────────
+const DATA_URL = '/data-study-case.json';
+let projectsData = [];
 
-        const PAGES = ['home', 'case-studies', 'architecture', 'experience', 'contact'];
-        const DETAILS = ['detail-project', 'detail-experience'];
+const PAGES   = ['home','case-studies','architecture','experience','contact'];
+const DETAILS = ['detail-project','detail-experience'];
 
-        // ─────────────────────────────────
-        //  ROUTING
-        // ─────────────────────────────────
-        function hideAll() {
-            PAGES.forEach(p => {
-                const el = document.getElementById('page-' + p);
-                el.classList.remove('active');
-                el.style.display = 'none';
-            });
-            DETAILS.forEach(d => {
-                const el = document.getElementById(d);
-                el.classList.remove('active');
-                el.style.display = 'none';
-            });
-        }
+// ─────────────────────────────────
+//  ROUTING
+// ─────────────────────────────────
+function hideAll() {
+    PAGES.forEach(p => {
+        const el = document.getElementById('page-' + p);
+        el.classList.remove('active');
+        el.style.display = 'none';
+    });
+    DETAILS.forEach(d => {
+        const el = document.getElementById(d);
+        el.classList.remove('active');
+        el.style.display = 'none';
+    });
+}
 
-        function navigate(page) {
-            hideAll();
-            const el = document.getElementById('page-' + page);
-            el.style.display = 'block';
-            requestAnimationFrame(() => el.classList.add('active'));
-            updateNav(page);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setTimeout(initReveal, 60);
-            lucide.createIcons();
-        }
+function navigate(page) {
+    hideAll();
+    const el = document.getElementById('page-' + page);
+    el.style.display = 'block';
+    requestAnimationFrame(() => el.classList.add('active'));
+    updateNav(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(initReveal, 60);
+    lucide.createIcons();
+}
 
-        function showDetail(id) {
-            hideAll();
-            const el = document.getElementById(id);
-            el.style.display = 'block';
-            requestAnimationFrame(() => el.classList.add('active'));
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            lucide.createIcons();
-        }
+function showDetail(id) {
+    hideAll();
+    const el = document.getElementById(id);
+    el.style.display = 'block';
+    requestAnimationFrame(() => el.classList.add('active'));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    lucide.createIcons();
+}
 
-        function backTo(page) { navigate(page); }
+function backTo(page) { navigate(page); }
 
-        function updateNav(active) {
-            PAGES.forEach(p => {
-                const el = document.getElementById('nav-' + p);
-                if (el) el.classList.toggle('active', p === active);
-            });
-        }
+function updateNav(active) {
+    PAGES.forEach(p => {
+        const el = document.getElementById('nav-' + p);
+        if (el) el.classList.toggle('active', p === active);
+    });
+}
 
-        // ─────────────────────────────────
-        //  SCROLL REVEAL
-        // ─────────────────────────────────
-        function initReveal() {
-            const io = new IntersectionObserver(entries => {
-                entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach(el => {
-                el.classList.remove('visible');
-                io.observe(el);
-            });
-        }
+// ─────────────────────────────────
+//  SCROLL REVEAL
+// ─────────────────────────────────
+function initReveal() {
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => {
+        el.classList.remove('visible');
+        io.observe(el);
+    });
+}
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
-        });
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+});
 
-        // ─────────────────────────────────
-        //  HELPERS
-        // ─────────────────────────────────
-        function specLabel(key) {
-            return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-        }
+// ─────────────────────────────────
+//  HELPERS
+// ─────────────────────────────────
+function specLabel(key) {
+    return key.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+}
 
-        function isMonetaryValue(val) {
-            return /\d/.test(val) && /(idr|million|usd|\$|rp)/i.test(val);
-        }
+function isMonetaryValue(val) {
+    return /\d/.test(val) && /(idr|million|usd|\$|rp)/i.test(val);
+}
 
-        // ─────────────────────────────────
-        //  RENDER: CARDS GRID
-        // ─────────────────────────────────
-        function renderProjectCards(projects) {
-            const grid = document.getElementById('projects-grid');
-            grid.innerHTML = '';
+// ─────────────────────────────────
+//  RENDER: CARDS GRID
+// ─────────────────────────────────
+function renderProjectCards(projects) {
+    const grid = document.getElementById('projects-grid');
+    grid.innerHTML = '';
 
-            if (!projects.length) {
-                grid.innerHTML = `<div style="grid-column:1/-1;color:#71717a;font-family:'IBM Plex Mono',monospace;font-size:12px;">No projects found.</div>`;
-                return;
-            }
+    if (!projects.length) {
+        grid.innerHTML = `<div style="grid-column:1/-1;color:#71717a;font-family:'IBM Plex Mono',monospace;font-size:12px;">No projects found.</div>`;
+        return;
+    }
 
-            projects.forEach((p, idx) => {
-                const skillTags = (p.skills || []).slice(0, 5)
-                    .map(s => `<span class="tag">${s}</span>`).join('');
+    projects.forEach((p, idx) => {
+        const skillTags = (p.skills || []).slice(0, 5)
+            .map(s => `<span class="tag">${s}</span>`).join('');
 
-                const valueColor = isMonetaryValue(p.value) ? '#22c55e' : '#60a5fa';
+        const valueColor = isMonetaryValue(p.value) ? '#22c55e' : '#60a5fa';
 
-                const card = document.createElement('div');
-                card.className = 'card-brief reveal';
-                card.style.cssText = 'padding:2rem;border-radius:2px;';
-                card.setAttribute('role', 'button');
-                card.setAttribute('tabindex', '0');
-                card.onclick = () => renderProjectDetail(idx);
-                card.onkeydown = e => { if (e.key === 'Enter') renderProjectDetail(idx); };
+        const card = document.createElement('div');
+        card.className = 'card-brief reveal';
+        card.style.cssText = 'padding:2rem;border-radius:2px;';
+        card.setAttribute('role','button');
+        card.setAttribute('tabindex','0');
+        card.onclick = () => renderProjectDetail(idx);
+        card.onkeydown = e => { if(e.key==='Enter') renderProjectDetail(idx); };
 
-                card.innerHTML = `
+        card.innerHTML = `
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;">
                 <span class="mono" style="font-size:10px;color:#3b82f6;text-transform:uppercase;letter-spacing:0.2em;">${p.project_date}</span>
                 <i data-lucide="arrow-up-right" class="card-arrow" style="width:16px;height:16px;color:#27272a;transition:color 0.3s;flex-shrink:0;"></i>
@@ -901,43 +600,43 @@
                 Est_Value: ${p.value}
             </div>
         `;
-                grid.appendChild(card);
-            });
+        grid.appendChild(card);
+    });
 
-            lucide.createIcons();
-            setTimeout(initReveal, 60);
-        }
+    lucide.createIcons();
+    setTimeout(initReveal, 60);
+}
 
-        // ─────────────────────────────────
-        //  RENDER: PROJECT DETAIL
-        // ─────────────────────────────────
-        function renderProjectDetail(idx) {
-            const p = projectsData[idx];
-            if (!p) return;
+// ─────────────────────────────────
+//  RENDER: PROJECT DETAIL
+// ─────────────────────────────────
+function renderProjectDetail(idx) {
+    const p = projectsData[idx];
+    if (!p) return;
 
-            // Filter lorem ipsum from technical_execution
-            const execSteps = (p.technical_execution || [])
-                .filter(s => !/^lorem ipsum/i.test(s.trim()))
-                .map(s => `<li style="margin-bottom:0.75rem;">${s}</li>`)
-                .join('');
+    // Filter lorem ipsum from technical_execution
+    const execSteps = (p.technical_execution || [])
+        .filter(s => !/^lorem ipsum/i.test(s.trim()))
+        .map(s => `<li style="margin-bottom:0.75rem;">${s}</li>`)
+        .join('');
 
-            // Build spec rows
-            const specRows = Object.entries(p.spec || {})
-                .map(([k, v]) => `
+    // Build spec rows
+    const specRows = Object.entries(p.spec || {})
+        .map(([k, v]) => `
             <div class="spec-row">
                 <span style="color:#52525b;">${specLabel(k)}</span>
                 <span style="color:#fff;text-align:right;max-width:60%;">${v}</span>
             </div>`)
-                .join('');
+        .join('');
 
-            const valueColor = isMonetaryValue(p.value) ? '#22c55e' : '#60a5fa';
+    const valueColor = isMonetaryValue(p.value) ? '#22c55e' : '#60a5fa';
 
-            const skillTags = (p.skills || [])
-                .map(s => `<span class="tag">${s}</span>`).join('');
+    const skillTags = (p.skills || [])
+        .map(s => `<span class="tag">${s}</span>`).join('');
 
-            const refDate = String(p.project_date).replace(/[^a-z0-9]/gi, '-').toUpperCase();
+    const refDate = String(p.project_date).replace(/[^a-z0-9]/gi,'-').toUpperCase();
 
-            document.getElementById('detail-project-content').innerHTML = `
+    document.getElementById('detail-project-content').innerHTML = `
         <div style="display:flex;flex-direction:column;gap:2rem;">
 
             <span class="mono" style="color:#3b82f6;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;">
@@ -951,10 +650,10 @@
             <div style="display:flex;flex-wrap:wrap;gap:6px;">${skillTags}</div>
 
             ${p.imagelocation
-                    ? `<img src="${p.imagelocation}" alt="${p.title}" class="project-img"
+                ? `<img src="${p.imagelocation}" alt="${p.title}" class="project-img"
                        onerror="this.outerHTML='<div class=project-img-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=%2327272a stroke-width=1.5><rect x=3 y=3 width=18 height=18 rx=2/><circle cx=8.5 cy=8.5 r=1.5/><path d=m21 15-5-5L5 21/></svg></div>'">`
-                    : `<div class="project-img-placeholder"><i data-lucide="image" style="width:48px;height:48px;"></i></div>`
-                }
+                : `<div class="project-img-placeholder"><i data-lucide="image" style="width:48px;height:48px;"></i></div>`
+            }
 
             <div class="detail-grid" style="display:grid;grid-template-columns:1fr 280px;gap:3rem;margin-top:0.5rem;align-items:start;">
 
@@ -995,47 +694,47 @@
         </div>
     `;
 
-            showDetail('detail-project');
-            lucide.createIcons();
-        }
+    showDetail('detail-project');
+    lucide.createIcons();
+}
 
-        // ─────────────────────────────────
-        //  EXPERIENCE — FETCH + RENDER
-        // ─────────────────────────────────
-        const EXP_URL = '/data-experiences.json';
-        let experiencesData = [];
+// ─────────────────────────────────
+//  EXPERIENCE — FETCH + RENDER
+// ─────────────────────────────────
+const EXP_URL = '/data-experiences.json';
+let experiencesData = [];
 
-        function formatPeriod(start, end) {
-            const fmt = (d) => {
-                if (!d || d === 'present') return 'Present';
-                const [y, m] = d.split('-');
-                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                return m ? `${months[parseInt(m, 10) - 1]} ${y}` : y;
-            };
-            return `${fmt(start)} – ${fmt(end)}`;
-        }
+function formatPeriod(start, end) {
+    const fmt = (d) => {
+        if (!d || d === 'present') return 'Present';
+        const [y, m] = d.split('-');
+        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return m ? `${months[parseInt(m,10)-1]} ${y}` : y;
+    };
+    return `${fmt(start)} – ${fmt(end)}`;
+}
 
-        function renderExperienceTimeline(experiences) {
-            const container = document.getElementById('experience-timeline');
-            container.innerHTML = '';
+function renderExperienceTimeline(experiences) {
+    const container = document.getElementById('experience-timeline');
+    container.innerHTML = '';
 
-            if (!experiences.length) {
-                container.innerHTML = `<div style="color:#71717a;font-family:'IBM Plex Mono',monospace;font-size:12px;">No experience data found.</div>`;
-                return;
-            }
+    if (!experiences.length) {
+        container.innerHTML = `<div style="color:#71717a;font-family:'IBM Plex Mono',monospace;font-size:12px;">No experience data found.</div>`;
+        return;
+    }
 
-            experiences.forEach((e, idx) => {
-                const period = formatPeriod(e.date_start, e.date_end);
-                const isPresent = !e.date_end || e.date_end === 'present';
+    experiences.forEach((e, idx) => {
+        const period = formatPeriod(e.date_start, e.date_end);
+        const isPresent = !e.date_end || e.date_end === 'present';
 
-                const item = document.createElement('div');
-                item.className = 'tl-item reveal';
-                item.setAttribute('role', 'button');
-                item.setAttribute('tabindex', '0');
-                item.onclick = () => showExperience(idx);
-                item.onkeydown = ev => { if (ev.key === 'Enter') showExperience(idx); };
+        const item = document.createElement('div');
+        item.className = 'tl-item reveal';
+        item.setAttribute('role', 'button');
+        item.setAttribute('tabindex', '0');
+        item.onclick = () => showExperience(idx);
+        item.onkeydown = ev => { if (ev.key === 'Enter') showExperience(idx); };
 
-                item.innerHTML = `
+        item.innerHTML = `
             <div class="tl-dot"></div>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
                 <div class="mono" style="color:#52525b;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;">${period}</div>
@@ -1051,25 +750,25 @@
                 View_Details <i data-lucide="chevron-right" style="width:10px;height:10px;"></i>
             </div>
         `;
-                container.appendChild(item);
-            });
+        container.appendChild(item);
+    });
 
-            lucide.createIcons();
-            setTimeout(initReveal, 60);
-        }
+    lucide.createIcons();
+    setTimeout(initReveal, 60);
+}
 
-        function showExperience(idx) {
-            const e = experiencesData[idx];
-            if (!e) return;
+function showExperience(idx) {
+    const e = experiencesData[idx];
+    if (!e) return;
 
-            const period = formatPeriod(e.date_start, e.date_end);
-            const isPresent = !e.date_end || e.date_end === 'present';
-            const refKey = `${(e.date_start || '').replace('-', '_').toUpperCase()}_EXP`;
+    const period = formatPeriod(e.date_start, e.date_end);
+    const isPresent = !e.date_end || e.date_end === 'present';
+    const refKey   = `${(e.date_start || '').replace('-','_').toUpperCase()}_EXP`;
 
-            const responsibilities = (e.core_responsibility || [])
-                .map(r => `<li style="margin-bottom:0.75rem;">${r}</li>`).join('');
+    const responsibilities = (e.core_responsibility || [])
+        .map(r => `<li style="margin-bottom:0.75rem;">${r}</li>`).join('');
 
-            document.getElementById('detail-experience-content').innerHTML = `
+    document.getElementById('detail-experience-content').innerHTML = `
         <span class="mono" style="color:#3b82f6;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;">LOG: ${refKey}</span>
 
         <h1 class="mono" style="font-size:clamp(1.8rem,5vw,3.5rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.04em;line-height:1.1;margin:1rem 0 6px;">
@@ -1107,20 +806,20 @@
         </div>
     `;
 
-            showDetail('detail-experience');
-            lucide.createIcons();
-        }
+    showDetail('detail-experience');
+    lucide.createIcons();
+}
 
-        async function loadExperiences() {
-            try {
-                const res = await fetch(EXP_URL);
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                const raw = await res.json();
-                experiencesData = Array.isArray(raw) ? raw : (raw.experiences || []);
-                renderExperienceTimeline(experiencesData);
-            } catch (err) {
-                console.error('Failed to load experience data:', err);
-                document.getElementById('experience-timeline').innerHTML = `
+async function loadExperiences() {
+    try {
+        const res = await fetch(EXP_URL);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const raw = await res.json();
+        experiencesData = Array.isArray(raw) ? raw : (raw.experiences || []);
+        renderExperienceTimeline(experiencesData);
+    } catch (err) {
+        console.error('Failed to load experience data:', err);
+        document.getElementById('experience-timeline').innerHTML = `
             <div style="padding:3rem;background:#09090b;border:1px solid #27272a;border-radius:2px;text-align:center;">
                 <div class="mono" style="color:#ef4444;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:10px;">ERROR_LOADING_DATA</div>
                 <p style="color:#71717a;font-size:0.85rem;margin:0;">
@@ -1129,22 +828,22 @@
                 </p>
             </div>
         `;
-            }
-        }
+    }
+}
 
-        // ─────────────────────────────────
-        //  FETCH PROJECTS JSON
-        // ─────────────────────────────────
-        async function loadProjects() {
-            try {
-                const res = await fetch(DATA_URL);
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                const raw = await res.json();
-                projectsData = Array.isArray(raw) ? raw : (raw.projects || []);
-                renderProjectCards(projectsData);
-            } catch (err) {
-                console.error('Failed to load project data:', err);
-                document.getElementById('projects-grid').innerHTML = `
+// ─────────────────────────────────
+//  FETCH PROJECTS JSON
+// ─────────────────────────────────
+async function loadProjects() {
+    try {
+        const res = await fetch(DATA_URL);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const raw = await res.json();
+        projectsData = Array.isArray(raw) ? raw : (raw.projects || []);
+        renderProjectCards(projectsData);
+    } catch (err) {
+        console.error('Failed to load project data:', err);
+        document.getElementById('projects-grid').innerHTML = `
             <div style="grid-column:1/-1;padding:3rem;background:#09090b;border:1px solid #27272a;border-radius:2px;text-align:center;">
                 <div class="mono" style="color:#ef4444;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:10px;">ERROR_LOADING_DATA</div>
                 <p style="color:#71717a;font-size:0.85rem;margin:0;">
@@ -1153,26 +852,14 @@
                 </p>
             </div>
         `;
-            }
-        }
+    }
+}
 
-        // ─────────────────────────────────
-        //  BOOT
-        // ─────────────────────────────────
-        window.addEventListener('DOMContentLoaded', () => {
-            PAGES.forEach(p => {
-                if (p !== 'home') document.getElementById('page-' + p).style.display = 'none';
-            });
-            DETAILS.forEach(d => { document.getElementById(d).style.display = 'none'; });
-
-            lucide.createIcons();
-            setTimeout(initReveal, 100);
-
-            // Preload both data sources in parallel
-            loadProjects();
-            loadExperiences();
-        });
-    </script>
-</body>
-
-</html>
+// ─────────────────────────────────
+//  BOOT
+// ─────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+    PAGES.forEach(p => {
+        if (p !== 'home') document.getElementById('page-' + p).style.display = 'none';
+    });
+    DETAILS.forEach(d => { document.getElementById(d)
