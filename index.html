@@ -1,934 +1,1512 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alaf Ramadhan | Industrial IT & Infrastructure</title>
+
+    <title>Alaf Ramadhan | Industrial IT & Infrastructure Engineer</title>
+
+    <meta name="description"
+        content="Portfolio of Alaf Ramadhan — Industrial IT engineer specializing in infrastructure systems, IoT deployment, automation, and real-world engineering solutions.">
+
+    <meta name="author" content="Alaf Ramadhan">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://alaf.my.id/">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Alaf Ramadhan | Industrial IT & Infrastructure Engineer">
-    <meta property="og:description" content="Portfolio of Alaf Ramadhan — Industrial IT infrastructure, IoT systems, automation, and engineering projects.">
+    <meta property="og:description"
+        content="Industrial IT infrastructure, IoT systems, automation, and engineering projects.">
     <meta property="og:image" content="https://alaf.my.id/public/og-preview.jpg">
     <meta property="og:url" content="https://alaf.my.id/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alaf Ramadhan">
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alaf Ramadhan | Industrial IT & Infrastructure Engineer">
+    <meta name="twitter:description"
+        content="Industrial IT infrastructure, IoT systems, automation, and engineering projects.">
     <meta name="twitter:image" content="https://alaf.my.id/public/og-preview.jpg">
 
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Theme -->
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/public/favicon_io/site.webmanifest">
+
+    <!-- Lucide icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="public/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="public/favicon_io/site.webmanifest">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alaf Ramadhan",
+        "url": "https://alaf.my.id",
+        "jobTitle": "Industrial IT & Infrastructure Engineer",
+        "description": "Industrial IT engineer specializing in infrastructure systems, IoT deployment, automation, and real-world engineering solutions.",
+        "sameAs": [
+        "https://github.com/YOUR_GITHUB",
+        "https://linkedin.com/in/YOUR_LINKEDIN"
+        ]
+        }
+</script>
 
     <style>
-    /* ══════════════════════════════════════════
+        /* ══════════════════════════════════════════
        THEME TOKENS
     ══════════════════════════════════════════ */
-    :root {
-        --blue:   #3b82f6;
-        --blue-lt:#60a5fa;
-        --cyan:   #22d3ee;
-        --green:  #22c55e;
-        --trans:  0.25s ease;
-    }
+        :root {
+            --blue: #3b82f6;
+            --blue-lt: #60a5fa;
+            --cyan: #22d3ee;
+            --green: #22c55e;
+            --trans: 0.25s ease;
+        }
 
-    /* DARK (default) */
-    [data-theme="dark"] {
-        --bg:        #000000;
-        --bg2:       #09090b;
-        --bg3:       #18181b;
-        --border:    #18181b;
-        --border2:   #27272a;
-        --text:      #ffffff;
-        --text2:     #71717a;
-        --text3:     #52525b;
-        --grid-line: #0f0f0f;
-        --nav-bg:    rgba(0,0,0,0.96);
-        --tag-bg:    #000000;
-        --skeleton1: #09090b;
-        --skeleton2: #18181b;
-        --scrollbar: #27272a;
-        --logo-bg:   #ffffff;
-        --logo-fg:   #000000;
-    }
+        /* DARK (default) */
+        [data-theme="dark"] {
+            --bg: #000000;
+            --bg2: #09090b;
+            --bg3: #18181b;
+            --border: #18181b;
+            --border2: #27272a;
+            --text: #ffffff;
+            --text2: #71717a;
+            --text3: #52525b;
+            --grid-line: #0f0f0f;
+            --nav-bg: rgba(0, 0, 0, 0.96);
+            --tag-bg: #000000;
+            --skeleton1: #09090b;
+            --skeleton2: #18181b;
+            --scrollbar: #27272a;
+            --logo-bg: #ffffff;
+            --logo-fg: #000000;
+        }
 
-    /* LIGHT */
-    [data-theme="light"] {
-        --bg:        #f8f8f6;
-        --bg2:       #ffffff;
-        --bg3:       #f1f0ed;
-        --border:    #e4e4e0;
-        --border2:   #d4d4cf;
-        --text:      #0a0a0a;
-        --text2:     #6b7280;
-        --text3:     #9ca3af;
-        --grid-line: #e8e8e4;
-        --nav-bg:    rgba(248,248,246,0.97);
-        --tag-bg:    #f1f0ed;
-        --skeleton1: #f1f0ed;
-        --skeleton2: #e4e4e0;
-        --scrollbar: #d4d4cf;
-        --logo-bg:   #0a0a0a;
-        --logo-fg:   #ffffff;
-    }
+        /* LIGHT */
+        [data-theme="light"] {
+            --bg: #f8f8f6;
+            --bg2: #ffffff;
+            --bg3: #f1f0ed;
+            --border: #e4e4e0;
+            --border2: #d4d4cf;
+            --text: #0a0a0a;
+            --text2: #6b7280;
+            --text3: #9ca3af;
+            --grid-line: #e8e8e4;
+            --nav-bg: rgba(248, 248, 246, 0.97);
+            --tag-bg: #f1f0ed;
+            --skeleton1: #f1f0ed;
+            --skeleton2: #e4e4e0;
+            --scrollbar: #d4d4cf;
+            --logo-bg: #0a0a0a;
+            --logo-fg: #ffffff;
+        }
 
-    /* ══════════════════════════════════════════
+        /* ══════════════════════════════════════════
        BASE
     ══════════════════════════════════════════ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        background-color: var(--bg);
-        color: var(--text);
-        font-family: 'IBM Plex Sans', sans-serif;
-        overflow-x: hidden;
-        transition: background-color var(--trans), color var(--trans);
-    }
-    .mono { font-family: 'IBM Plex Mono', monospace; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'IBM Plex Sans', sans-serif;
+            overflow-x: hidden;
+            transition: background-color var(--trans), color var(--trans);
+        }
 
-    .grid-bg {
-        background-image:
-            linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-            linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-        background-size: 48px 48px;
-    }
+        .mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
 
-    /* ══════════════════════════════════════════
+        .grid-bg {
+            background-image:
+                linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+
+        /* ══════════════════════════════════════════
        NAV
     ══════════════════════════════════════════ */
-    #navbar {
-        position: fixed; top: 0; width: 100%; z-index: 100;
-        padding: 1.1rem 1.5rem;
-        transition: background var(--trans), border-color var(--trans);
-    }
-    #navbar.scrolled {
-        background: var(--nav-bg);
-        border-bottom: 1px solid var(--border);
-        backdrop-filter: blur(8px);
-    }
-    .nav-inner {
-        max-width: 1280px; margin: 0 auto;
-        display: flex; justify-content: space-between; align-items: center; gap: 1rem;
-    }
-    .nav-logo { display: flex; align-items: center; gap: 12px; cursor: pointer; flex-shrink: 0; }
-    .nav-logo-box {
-        width: 38px; height: 38px;
-        background: var(--logo-bg); color: var(--logo-fg);
-        font-weight: 700; font-family: 'IBM Plex Mono', monospace;
-        display: flex; align-items: center; justify-content: center;
-        border-radius: 2px; flex-shrink: 0;
-        transition: background var(--trans), color var(--trans);
-    }
-    .nav-logo-text { display: flex; flex-direction: column; }
-    .nav-logo-name { font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color: var(--text); }
-    .nav-logo-role { font-family:'IBM Plex Mono',monospace; font-size:9px; color: var(--blue); letter-spacing:0.2em; text-transform:uppercase; }
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1.1rem 1.5rem;
+            transition: background var(--trans), border-color var(--trans);
+        }
 
-    /* Desktop links */
-    .nav-links {
-        display: flex; align-items: center; gap: 1.75rem;
-    }
-    .nav-link {
-        font-family: 'IBM Plex Mono', monospace;
-        font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
-        color: var(--text2); text-decoration: none;
-        border-bottom: 1px solid transparent; padding-bottom: 2px;
-        transition: color var(--trans), border-color var(--trans); cursor: pointer;
-        background: none; border-top: none; border-left: none; border-right: none;
-        font: inherit;
-    }
-    .nav-link:hover { color: var(--text); }
-    .nav-link.active { color: var(--text); border-bottom-color: var(--blue); }
+        #navbar.scrolled {
+            background: var(--nav-bg);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(8px);
+        }
 
-    /* Nav right controls */
-    .nav-controls { display: flex; align-items: center; gap: 0.75rem; }
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
 
-    /* Theme toggle */
-    .theme-btn {
-        width: 36px; height: 36px;
-        background: var(--bg3); border: 1px solid var(--border2);
-        border-radius: 2px; cursor: pointer;
-        display: flex; align-items: center; justify-content: center;
-        color: var(--text2); transition: all var(--trans);
-        flex-shrink: 0;
-    }
-    .theme-btn:hover { color: var(--text); border-color: var(--blue); }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
 
-    /* Hamburger */
-    .hamburger {
-        display: none;
-        width: 36px; height: 36px;
-        background: var(--bg3); border: 1px solid var(--border2);
-        border-radius: 2px; cursor: pointer;
-        flex-direction: column; align-items: center; justify-content: center; gap: 4px;
-        transition: all var(--trans);
-    }
-    .hamburger span {
-        display: block; width: 18px; height: 1.5px;
-        background: var(--text); transition: all 0.3s ease; border-radius: 1px;
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .hamburger.open span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+        .nav-logo-box {
+            width: 38px;
+            height: 38px;
+            background: var(--logo-bg);
+            color: var(--logo-fg);
+            font-weight: 700;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            flex-shrink: 0;
+            transition: background var(--trans), color var(--trans);
+        }
 
-    /* Mobile drawer */
-    .mobile-menu {
-        display: none;
-        position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-        background: var(--bg); z-index: 99;
-        flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
-        animation: fadeUp 0.25s ease forwards;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-nav-link {
-        font-family: 'IBM Plex Mono', monospace;
-        font-size: 1.1rem; letter-spacing: 0.15em; text-transform: uppercase;
-        color: var(--text2); cursor: pointer; transition: color var(--trans);
-        background: none; border: none;
-    }
-    .mobile-nav-link:hover, .mobile-nav-link.active { color: var(--blue); }
+        .nav-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
 
-    /* ══════════════════════════════════════════
+        .nav-logo-name {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text);
+        }
+
+        .nav-logo-role {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 9px;
+            color: var(--blue);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Desktop links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+        }
+
+        .nav-link {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text2);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+            transition: color var(--trans), border-color var(--trans);
+            cursor: pointer;
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font: inherit;
+        }
+
+        .nav-link:hover {
+            color: var(--text);
+        }
+
+        .nav-link.active {
+            color: var(--text);
+            border-bottom-color: var(--blue);
+        }
+
+        /* Nav right controls */
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        /* Theme toggle */
+        .theme-btn {
+            width: 36px;
+            height: 36px;
+            background: var(--bg3);
+            border: 1px solid var(--border2);
+            border-radius: 2px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text2);
+            transition: all var(--trans);
+            flex-shrink: 0;
+        }
+
+        .theme-btn:hover {
+            color: var(--text);
+            border-color: var(--blue);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            width: 36px;
+            height: 36px;
+            background: var(--bg3);
+            border: 1px solid var(--border2);
+            border-radius: 2px;
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: all var(--trans);
+        }
+
+        .hamburger span {
+            display: block;
+            width: 18px;
+            height: 1.5px;
+            background: var(--text);
+            transition: all 0.3s ease;
+            border-radius: 1px;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(5.5px) rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-5.5px) rotate(-45deg);
+        }
+
+        /* Mobile drawer */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg);
+            z-index: 99;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            animation: fadeUp 0.25s ease forwards;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-nav-link {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text2);
+            cursor: pointer;
+            transition: color var(--trans);
+            background: none;
+            border: none;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--blue);
+        }
+
+        /* ══════════════════════════════════════════
        PAGE SYSTEM
     ══════════════════════════════════════════ */
-    .page { display: none; }
-    .page.active { display: block; animation: fadeUp 0.4s ease forwards; }
-    .detail-view { display: none; }
-    .detail-view.active { display: block; animation: fadeUp 0.35s ease forwards; }
+        .page {
+            display: none;
+        }
 
-    @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(16px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
+        .page.active {
+            display: block;
+            animation: fadeUp 0.4s ease forwards;
+        }
 
-    /* ══════════════════════════════════════════
+        .detail-view {
+            display: none;
+        }
+
+        .detail-view.active {
+            display: block;
+            animation: fadeUp 0.35s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ══════════════════════════════════════════
        LAYOUT WRAPPERS
     ══════════════════════════════════════════ */
-    .page-wrap  { max-width: 1280px; margin: 0 auto; padding: 8rem 1.5rem 6rem; }
-    .page-wrap--home { max-width: 1280px; margin: 0 auto; padding: 9rem 1.5rem 6rem; }
-    .detail-wrap { max-width: 960px; margin: 0 auto; padding: 7rem 1.5rem 6rem; }
+        .page-wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 8rem 1.5rem 6rem;
+        }
 
-    /* ══════════════════════════════════════════
+        .page-wrap--home {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 9rem 1.5rem 6rem;
+        }
+
+        .detail-wrap {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 7rem 1.5rem 6rem;
+        }
+
+        /* ══════════════════════════════════════════
        REVEAL
     ══════════════════════════════════════════ */
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
 
-    /* ══════════════════════════════════════════
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ══════════════════════════════════════════
        CARDS
     ══════════════════════════════════════════ */
-    .card {
-        background: var(--bg2); border: 1px solid var(--border);
-        padding: 1.75rem; border-radius: 2px;
-        transition: border-color var(--trans), transform 0.3s; cursor: pointer;
-    }
-    .card:hover { border-color: var(--blue); transform: translateY(-3px); }
-    .card:hover .card-arrow { color: var(--blue) !important; }
+        .card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            padding: 1.75rem;
+            border-radius: 2px;
+            transition: border-color var(--trans), transform 0.3s;
+            cursor: pointer;
+        }
 
-    /* Panel (non-clickable card) */
-    .panel { background: var(--bg2); border: 1px solid var(--border); padding: 2rem; border-radius: 2px; }
+        .card:hover {
+            border-color: var(--blue);
+            transform: translateY(-3px);
+        }
 
-    /* ══════════════════════════════════════════
+        .card:hover .card-arrow {
+            color: var(--blue) !important;
+        }
+
+        /* Panel (non-clickable card) */
+        .panel {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 2px;
+        }
+
+        /* ══════════════════════════════════════════
        TAGS
     ══════════════════════════════════════════ */
-    .tag {
-        display: inline-block; padding: 2px 8px;
-        background: var(--tag-bg); border: 1px solid var(--border2);
-        font-family: 'IBM Plex Mono', monospace;
-        font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em;
-        color: var(--text2);
-        transition: background var(--trans), border-color var(--trans), color var(--trans);
-    }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            background: var(--tag-bg);
+            border: 1px solid var(--border2);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text2);
+            transition: background var(--trans), border-color var(--trans), color var(--trans);
+        }
 
-    /* ══════════════════════════════════════════
+        /* ══════════════════════════════════════════
        TIMELINE
     ══════════════════════════════════════════ */
-    .tl-item {
-        border-left: 1px solid var(--border); padding-left: 2rem;
-        position: relative; transition: border-color var(--trans); cursor: pointer;
-    }
-    .tl-item:hover { border-color: var(--blue); }
-    .tl-dot {
-        position: absolute; width: 8px; height: 8px;
-        background: var(--blue); left: -4.5px; top: 6px;
-        box-shadow: 0 0 10px rgba(59,130,246,0.5); transition: transform 0.3s;
-    }
-    .tl-item:hover .tl-dot { transform: scale(1.5); }
+        .tl-item {
+            border-left: 1px solid var(--border);
+            padding-left: 2rem;
+            position: relative;
+            transition: border-color var(--trans);
+            cursor: pointer;
+        }
 
-    /* ══════════════════════════════════════════
+        .tl-item:hover {
+            border-color: var(--blue);
+        }
+
+        .tl-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--blue);
+            left: -4.5px;
+            top: 6px;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .tl-item:hover .tl-dot {
+            transform: scale(1.5);
+        }
+
+        /* ══════════════════════════════════════════
        ARCH NODE
     ══════════════════════════════════════════ */
-    .arch-node { border: 1px solid var(--border2); background: var(--bg2); padding: 1.5rem; border-radius: 2px; min-width: 160px; }
+        .arch-node {
+            border: 1px solid var(--border2);
+            background: var(--bg2);
+            padding: 1.5rem;
+            border-radius: 2px;
+            min-width: 160px;
+        }
 
-    /* ══════════════════════════════════════════
+        /* ══════════════════════════════════════════
        SPEC ROW
     ══════════════════════════════════════════ */
-    .spec-row {
-        display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
-        border-bottom: 1px solid var(--border); padding-bottom: 8px;
-        font-family: 'IBM Plex Mono', monospace; font-size: 11px;
-        transition: border-color var(--trans);
-    }
-    .spec-row:last-child { border-bottom: none; padding-bottom: 0; }
-    .spec-label { color: var(--text3); flex-shrink: 0; }
-    .spec-val { color: var(--text); text-align: right; }
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            transition: border-color var(--trans);
+        }
 
-    /* ══════════════════════════════════════════
+        .spec-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .spec-label {
+            color: var(--text3);
+            flex-shrink: 0;
+        }
+
+        .spec-val {
+            color: var(--text);
+            text-align: right;
+        }
+
+        /* ══════════════════════════════════════════
        BUTTONS
     ══════════════════════════════════════════ */
-    .btn {
-        display: inline-flex; align-items: center; gap: 8px;
-        padding: 13px 24px; border-radius: 2px; cursor: pointer;
-        font-family: 'IBM Plex Mono', monospace; font-size: 10px;
-        font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;
-        text-decoration: none; transition: all 0.25s; border: 1px solid transparent;
-        white-space: nowrap;
-    }
-    .btn-primary { background: var(--text); color: var(--bg); border-color: var(--text); }
-    .btn-primary:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
-    .btn-ghost { background: transparent; color: var(--text); border-color: var(--border2); }
-    .btn-ghost:hover { background: var(--text); color: var(--bg); }
-    .btn-blue {
-        background: rgba(59,130,246,0.08); color: var(--blue-lt);
-        border-color: rgba(59,130,246,0.35);
-    }
-    .btn-blue:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 24px;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-decoration: none;
+            transition: all 0.25s;
+            border: 1px solid transparent;
+            white-space: nowrap;
+        }
 
-    /* Back button */
-    .back-btn {
-        display: inline-flex; align-items: center; gap: 8px;
-        color: var(--text2); font-family: 'IBM Plex Mono', monospace;
-        font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em;
-        cursor: pointer; transition: color var(--trans);
-        background: none; border: none;
-    }
-    .back-btn:hover { color: var(--text); }
+        .btn-primary {
+            background: var(--text);
+            color: var(--bg);
+            border-color: var(--text);
+        }
 
-    /* ══════════════════════════════════════════
+        .btn-primary:hover {
+            background: var(--blue);
+            color: #fff;
+            border-color: var(--blue);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text);
+            border-color: var(--border2);
+        }
+
+        .btn-ghost:hover {
+            background: var(--text);
+            color: var(--bg);
+        }
+
+        .btn-blue {
+            background: rgba(59, 130, 246, 0.08);
+            color: var(--blue-lt);
+            border-color: rgba(59, 130, 246, 0.35);
+        }
+
+        .btn-blue:hover {
+            background: var(--blue);
+            color: #fff;
+            border-color: var(--blue);
+        }
+
+        /* Back button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text2);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            cursor: pointer;
+            transition: color var(--trans);
+            background: none;
+            border: none;
+        }
+
+        .back-btn:hover {
+            color: var(--text);
+        }
+
+        /* ══════════════════════════════════════════
        GRADIENT TEXT
     ══════════════════════════════════════════ */
-    .grad-text {
-        background: linear-gradient(90deg, #60a5fa, #22d3ee);
-        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
+        .grad-text {
+            background: linear-gradient(90deg, #60a5fa, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    /* ══════════════════════════════════════════
+        /* ══════════════════════════════════════════
        ANIMATIONS
     ══════════════════════════════════════════ */
-    @keyframes pulse  { 0%,100%{opacity:1} 50%{opacity:.3} }
-    @keyframes ping   { 0%{transform:scale(1);opacity:1} 100%{transform:scale(2.2);opacity:0} }
-    @keyframes shimmer{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
-    .pulse-dot { animation: pulse 2s infinite; }
-    .ping-dot  { animation: ping  1.5s infinite; }
+        @keyframes pulse {
 
-    /* ══════════════════════════════════════════
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .3
+            }
+        }
+
+        @keyframes ping {
+            0% {
+                transform: scale(1);
+                opacity: 1
+            }
+
+            100% {
+                transform: scale(2.2);
+                opacity: 0
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 200% 0
+            }
+
+            100% {
+                background-position: -200% 0
+            }
+        }
+
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+
+        .ping-dot {
+            animation: ping 1.5s infinite;
+        }
+
+        /* ══════════════════════════════════════════
        SKELETON
     ══════════════════════════════════════════ */
-    .skeleton {
-        background: linear-gradient(90deg, var(--skeleton1) 25%, var(--skeleton2) 50%, var(--skeleton1) 75%);
-        background-size: 200% 100%;
-        animation: shimmer 1.5s infinite;
-        border-radius: 2px;
-    }
+        .skeleton {
+            background: linear-gradient(90deg, var(--skeleton1) 25%, var(--skeleton2) 50%, var(--skeleton1) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 2px;
+        }
 
-    /* ══════════════════════════════════════════
+        /* ══════════════════════════════════════════
        PROJECT IMAGE
     ══════════════════════════════════════════ */
-    .project-img { width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid var(--border); border-radius:2px; display:block; }
-    .project-img-placeholder {
-        width:100%; aspect-ratio:16/9; background:var(--bg2);
-        border:1px solid var(--border); border-radius:2px;
-        display:flex; align-items:center; justify-content:center; color:var(--border2);
-    }
+        .project-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            display: block;
+        }
 
-    /* ══════════════════════════════════════════
+        .project-img-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--border2);
+        }
+
+        /* ══════════════════════════════════════════
        CONTACT CHANNEL ROWS
     ══════════════════════════════════════════ */
-    .contact-row {
-        display:flex; align-items:center; gap:1.25rem; padding:1.25rem 1.5rem;
-        background:var(--bg2); border:1px solid var(--border); border-radius:2px;
-        text-decoration:none; transition:border-color 0.25s, transform 0.25s;
-    }
-    .contact-row:hover { transform: translateY(-2px); }
-    .contact-icon {
-        width:42px; height:42px; flex-shrink:0;
-        background:var(--bg3); border:1px solid var(--border2); border-radius:2px;
-        display:flex; align-items:center; justify-content:center;
-        transition: background var(--trans);
-    }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            text-decoration: none;
+            transition: border-color 0.25s, transform 0.25s;
+        }
 
-    /* ══════════════════════════════════════════
+        .contact-row:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            background: var(--bg3);
+            border: 1px solid var(--border2);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--trans);
+        }
+
+        /* ══════════════════════════════════════════
        FOOTER
     ══════════════════════════════════════════ */
-    footer { border-top: 1px solid var(--border); padding: 2.5rem 1.5rem; }
-    .footer-inner {
-        max-width:1280px; margin:0 auto;
-        display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
-    }
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 1.5rem;
+        }
 
-    /* ══════════════════════════════════════════
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* ══════════════════════════════════════════
        SCROLLBAR
     ══════════════════════════════════════════ */
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 2px; }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
 
-    /* ══════════════════════════════════════════
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--scrollbar);
+            border-radius: 2px;
+        }
+
+        /* ══════════════════════════════════════════
        RESPONSIVE GRID HELPERS
     ══════════════════════════════════════════ */
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .grid-2-left { display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start; }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
 
-    /* ══════════════════════════════════════════
+        .grid-2-left {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* ══════════════════════════════════════════
        RESPONSIVE — MOBILE
     ══════════════════════════════════════════ */
-    @media (max-width: 768px) {
-        .nav-links { display: none; }
-        .hamburger { display: flex; }
-        .nav-logo-text { display: none; }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
 
-        .page-wrap  { padding: 6.5rem 1rem 4rem; }
-        .page-wrap--home { padding: 6.5rem 1rem 4rem; }
-        .detail-wrap { padding: 6rem 1rem 4rem; }
+            .hamburger {
+                display: flex;
+            }
 
-        .grid-2 { grid-template-columns: 1fr !important; gap: 1.5rem; }
-        .grid-2-left { grid-template-columns: 1fr !important; gap: 2rem; }
+            .nav-logo-text {
+                display: none;
+            }
 
-        .hero-btns { flex-direction: column !important; }
-        .hero-btns .btn { justify-content: center; width: 100%; }
+            .page-wrap {
+                padding: 6.5rem 1rem 4rem;
+            }
 
-        .arch-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            .page-wrap--home {
+                padding: 6.5rem 1rem 4rem;
+            }
 
-        .profile-section { grid-template-columns: 1fr !important; }
-        .contact-section  { grid-template-columns: 1fr !important; }
-    }
+            .detail-wrap {
+                padding: 6rem 1rem 4rem;
+            }
 
-    @media (max-width: 480px) {
-        .page-wrap  { padding: 6rem 0.875rem 3rem; }
-        .page-wrap--home { padding: 6rem 0.875rem 3rem; }
-    }
+            .grid-2 {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem;
+            }
+
+            .grid-2-left {
+                grid-template-columns: 1fr !important;
+                gap: 2rem;
+            }
+
+            .hero-btns {
+                flex-direction: column !important;
+            }
+
+            .hero-btns .btn {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .arch-scroll {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .profile-section {
+                grid-template-columns: 1fr !important;
+            }
+
+            .contact-section {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-wrap {
+                padding: 6rem 0.875rem 3rem;
+            }
+
+            .page-wrap--home {
+                padding: 6rem 0.875rem 3rem;
+            }
+        }
     </style>
 </head>
+
 <body class="grid-bg">
 
-<!-- ════════ MOBILE MENU ════════ -->
-<div id="mobile-menu" class="mobile-menu">
-    <button class="mobile-nav-link active" id="mnav-home"         onclick="navigate('home');closeMobileMenu()">Home</button>
-    <button class="mobile-nav-link"        id="mnav-case-studies" onclick="navigate('case-studies');closeMobileMenu()">Case_Studies</button>
-    <button class="mobile-nav-link"        id="mnav-architecture" onclick="navigate('architecture');closeMobileMenu()">Architecture</button>
-    <button class="mobile-nav-link"        id="mnav-experience"   onclick="navigate('experience');closeMobileMenu()">Experience</button>
-    <button class="mobile-nav-link"        id="mnav-contact"      onclick="navigate('contact');closeMobileMenu()">Contact</button>
-    <button class="theme-btn" onclick="toggleTheme()" style="margin-top:1rem;" id="mobile-theme-btn" title="Toggle theme">
-        <i data-lucide="sun" style="width:16px;height:16px;" id="mobile-theme-icon"></i>
-    </button>
-</div>
-
-<!-- ════════ NAV ════════ -->
-<nav id="navbar">
-    <div class="nav-inner">
-        <div class="nav-logo" onclick="navigate('home')">
-            <div class="nav-logo-box">A</div>
-            <div class="nav-logo-text">
-                <span class="nav-logo-name">ALAF RAMADHAN</span>
-                <span class="nav-logo-role">Systems_Engineer</span>
-            </div>
-        </div>
-
-        <div class="nav-links">
-            <button class="nav-link active" id="nav-home"         onclick="navigate('home')">Home</button>
-            <button class="nav-link"        id="nav-case-studies" onclick="navigate('case-studies')">Case_Studies</button>
-            <button class="nav-link"        id="nav-architecture" onclick="navigate('architecture')">Architecture</button>
-            <button class="nav-link"        id="nav-experience"   onclick="navigate('experience')">Experience</button>
-            <button class="nav-link"        id="nav-contact"      onclick="navigate('contact')">Contact</button>
-        </div>
-
-        <div class="nav-controls">
-            <button class="theme-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle theme">
-                <i data-lucide="sun" style="width:16px;height:16px;" id="theme-icon"></i>
-            </button>
-            <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
+    <!-- ════════ MOBILE MENU ════════ -->
+    <div id="mobile-menu" class="mobile-menu">
+        <button class="mobile-nav-link active" id="mnav-home" onclick="navigate('home');closeMobileMenu()">Home</button>
+        <button class="mobile-nav-link" id="mnav-case-studies"
+            onclick="navigate('case-studies');closeMobileMenu()">Case_Studies</button>
+        <button class="mobile-nav-link" id="mnav-architecture"
+            onclick="navigate('architecture');closeMobileMenu()">Architecture</button>
+        <button class="mobile-nav-link" id="mnav-experience"
+            onclick="navigate('experience');closeMobileMenu()">Experience</button>
+        <button class="mobile-nav-link" id="mnav-contact"
+            onclick="navigate('contact');closeMobileMenu()">Contact</button>
+        <button class="theme-btn" onclick="toggleTheme()" style="margin-top:1rem;" id="mobile-theme-btn"
+            title="Toggle theme">
+            <i data-lucide="sun" style="width:16px;height:16px;" id="mobile-theme-icon"></i>
+        </button>
     </div>
-</nav>
 
-
-<!-- ════════════════════════════════════════
-     PAGE: HOME
-════════════════════════════════════════ -->
-<div id="page-home" class="page active">
-<div class="page-wrap--home">
-
-    <!-- HERO -->
-    <section style="min-height:58vh;display:flex;flex-direction:column;justify-content:center;max-width:880px;gap:1.75rem;padding-bottom:2rem;">
-        <div style="display:inline-flex;align-items:center;padding:5px 14px;border-radius:999px;border:1px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.08);color:#60a5fa;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.15em;width:fit-content;">
-            <span class="pulse-dot" style="width:7px;height:7px;border-radius:50%;background:#3b82f6;margin-right:8px;display:inline-block;"></span>
-            SYSTEM_STATUS: NOMINAL &nbsp;|&nbsp; LOCATION: SEI MANGKE
-        </div>
-
-        <h1 style="font-size:clamp(2.4rem,8vw,5.5rem);font-weight:700;letter-spacing:-0.04em;line-height:1.05;color:var(--text);">
-            Building Reliable <span class="grad-text">Industrial Systems</span>.
-        </h1>
-
-        <p class="mono" style="font-size:clamp(0.9rem,2.5vw,1.1rem);color:var(--text2);line-height:1.75;max-width:580px;">
-            Bridging Edge Intelligence with Enterprise Cloud Infrastructure.
-        </p>
-
-        <div class="hero-btns" style="display:flex;flex-wrap:wrap;gap:0.875rem;padding-top:0.5rem;">
-            <button class="btn btn-primary" onclick="navigate('case-studies')">
-                Technical Case Studies <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
-            </button>
-            <a class="btn btn-ghost" href="https://drive.google.com/file/d/1mTR8JQmSqP0X2L4T_QBQoOrTUjQ9x2_B/view" target="_blank" download>
-                Download CV <i data-lucide="download" style="width:14px;height:14px;"></i>
-            </a>
-            <button class="btn btn-blue" onclick="navigate('contact')">\
-                Contact Me <i data-lucide="send" style="width:14px;height:14px;"></i>
-            </button>
-        </div>
-    </section>
-
-    <!-- PROFILE BRIEF -->
-    <section class="reveal profile-section" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:5rem;">
-        <div style="display:flex;flex-direction:column;gap:1.25rem;">
-            <h2 class="mono" style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;display:flex;align-items:center;gap:10px;color:var(--text);">
-                <i data-lucide="terminal" style="color:var(--blue);width:18px;height:18px;"></i> Profile_Brief
-            </h2>
-            <div style="display:flex;flex-direction:column;gap:0.875rem;color:var(--text2);line-height:1.8;font-size:1rem;">
-                <p>I am an <strong style="color:var(--text);">Industrial IT and Infrastructure Engineer</strong> specialized in integrating physical hardware with secure digital platforms.</p>
-                <p>My focus is on reliability, uptime, and architectural clarity in high-pressure production environments.</p>
-            </div>
-        </div>
-
-        <div class="panel">
-            <div class="mono" style="color:var(--blue);font-size:10px;font-weight:700;letter-spacing:0.2em;margin-bottom:1.25rem;">>> OPERATIONAL_PROFILE</div>
-            <div style="display:flex;flex-direction:column;gap:10px;">
-                <div class="spec-row"><span class="spec-label">Current_Org</span><span class="spec-val">Unilever Oleochemical</span></div>
-                <div class="spec-row"><span class="spec-label">Primary_Focus</span><span class="spec-val">Edge-to-Cloud Integration</span></div>
-                <div style="display:flex;justify-content:space-between;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11px;">
-                    <span class="spec-label">System_State</span>
-                    <span style="color:var(--green);display:flex;align-items:center;gap:6px;">
-                        <span class="ping-dot" style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;"></span> ONLINE
-                    </span>
+    <!-- ════════ NAV ════════ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo" onclick="navigate('home')">
+                <div class="nav-logo-box">A</div>
+                <div class="nav-logo-text">
+                    <span class="nav-logo-name">ALAF RAMADHAN</span>
+                    <span class="nav-logo-role">Systems_Engineer</span>
                 </div>
             </div>
+
+            <div class="nav-links">
+                <button class="nav-link active" id="nav-home" onclick="navigate('home')">Home</button>
+                <button class="nav-link" id="nav-case-studies" onclick="navigate('case-studies')">Case_Studies</button>
+                <button class="nav-link" id="nav-architecture" onclick="navigate('architecture')">Architecture</button>
+                <button class="nav-link" id="nav-experience" onclick="navigate('experience')">Experience</button>
+                <button class="nav-link" id="nav-contact" onclick="navigate('contact')">Contact</button>
+            </div>
+
+            <div class="nav-controls">
+                <button class="theme-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle theme">
+                    <i data-lucide="sun" style="width:16px;height:16px;" id="theme-icon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-    </section>
-
-</div>
-</div>
-
-
-<!-- ════════════════════════════════════════
-     PAGE: CASE STUDIES
-════════════════════════════════════════ -->
-<div id="page-case-studies" class="page">
-<div class="page-wrap">
-    <div style="max-width:700px;margin-bottom:3.5rem;">
-        <h2 class="mono" style="font-size:clamp(1.5rem,4vw,2rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:6px;color:var(--text);">Case_Study_Repository</h2>
-        <p class="mono" style="color:var(--text3);font-size:10px;text-transform:uppercase;letter-spacing:0.2em;">Deep dives into industrial deployments.</p>
-    </div>
-    <div id="projects-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;">
-        <div class="skeleton" style="height:260px;"></div>
-        <div class="skeleton" style="height:260px;"></div>
-        <div class="skeleton" style="height:260px;"></div>
-    </div>
-</div>
-</div>
-
-
-<!-- DETAIL: PROJECT -->
-<div id="detail-project" class="detail-view">
-<div class="detail-wrap">
-    <nav style="margin-bottom:2.5rem;">
-        <button class="back-btn" onclick="backTo('case-studies')">
-            <i data-lucide="arrow-left" style="width:14px;height:14px;"></i> BACK_TO_REPOSITORY
-        </button>
     </nav>
-    <div id="detail-project-content"></div>
-</div>
-</div>
 
 
-<!-- ════════════════════════════════════════
-     PAGE: ARCHITECTURE
+    <!-- ════════════════════════════════════════
+     PAGE: HOME
 ════════════════════════════════════════ -->
-<div id="page-architecture" class="page">
-<div class="page-wrap">
-    <h2 class="mono" style="font-size:clamp(1.5rem,4vw,2rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:2.5rem;color:var(--text);">System_Blueprint</h2>
+    <div id="page-home" class="page active">
+        <div class="page-wrap--home">
 
-    <!-- Arch diagram -->
-    <div class="panel arch-scroll" style="margin-bottom:2rem;padding:2rem;">
-        <div style="min-width:680px;display:flex;justify-content:space-between;align-items:center;gap:0.75rem;">
-            <div class="arch-node">
-                <div class="mono" style="color:#f97316;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">Edge_Level</div>
-                <div style="font-weight:700;font-size:0.875rem;margin-bottom:8px;color:var(--text);">Sensors & MCUs</div>
-                <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">Arduino</span><span class="tag">ESP32</span><span class="tag">ATmega328</span></div>
-            </div>
-            <div style="color:var(--border2);font-size:1.25rem;">&#8594;</div>
-            <div class="arch-node">
-                <div class="mono" style="color:#3b82f6;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">Protocol_Layer</div>
-                <div style="font-weight:700;font-size:0.875rem;margin-bottom:8px;color:var(--text);">Modbus / MQTT</div>
-                <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">RS485</span><span class="tag">RS232</span><span class="tag">I2C/SPI</span></div>
-            </div>
-            <div style="color:var(--border2);font-size:1.25rem;">&#8594;</div>
-            <div class="arch-node">
-                <div class="mono" style="color:#22d3ee;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">Gateway</div>
-                <div style="font-weight:700;font-size:0.875rem;margin-bottom:8px;color:var(--text);">Edge Processing</div>
-                <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">Raspberry Pi</span><span class="tag">NGINX</span><span class="tag">Node-RED</span></div>
-            </div>
-            <div style="color:var(--border2);font-size:1.25rem;">&#8594;</div>
-            <div class="arch-node">
-                <div class="mono" style="color:#a78bfa;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">Cloud</div>
-                <div style="font-weight:700;font-size:0.875rem;margin-bottom:8px;color:var(--text);">Enterprise Infra</div>
-                <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">AWS IoT</span><span class="tag">Lambda</span><span class="tag">Entra ID</span></div>
-            </div>
-        </div>
-    </div>
+            <!-- HERO -->
+            <section
+                style="min-height:58vh;display:flex;flex-direction:column;justify-content:center;max-width:880px;gap:1.75rem;padding-bottom:2rem;">
+                <div
+                    style="display:inline-flex;align-items:center;padding:5px 14px;border-radius:999px;border:1px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.08);color:#60a5fa;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.15em;width:fit-content;">
+                    <span class="pulse-dot"
+                        style="width:7px;height:7px;border-radius:50%;background:#3b82f6;margin-right:8px;display:inline-block;"></span>
+                    SYSTEM_STATUS: NOMINAL &nbsp;|&nbsp; LOCATION: SEI MANGKE
+                </div>
 
-    <div class="grid-2">
-        <div class="panel">
-            <div class="mono" style="color:var(--blue);font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1rem;">>> DESIGN_PRINCIPLES</div>
-            <div style="display:flex;flex-direction:column;gap:10px;color:var(--text2);font-size:0.875rem;line-height:1.65;">
-                <div style="display:flex;gap:12px;"><span class="mono" style="color:var(--border2);flex-shrink:0;">01</span><span>Fault-tolerant edge nodes with local buffering and retry logic.</span></div>
-                <div style="display:flex;gap:12px;"><span class="mono" style="color:var(--border2);flex-shrink:0;">02</span><span>Encrypted transport using TLS 1.3 from device to cloud.</span></div>
-                <div style="display:flex;gap:12px;"><span class="mono" style="color:var(--border2);flex-shrink:0;">03</span><span>Role-based access control via Microsoft Entra ID integration.</span></div>
-                <div style="display:flex;gap:12px;"><span class="mono" style="color:var(--border2);flex-shrink:0;">04</span><span>Stateless Lambda functions for horizontal scalability.</span></div>
-            </div>
-        </div>
-        <div class="panel">
-            <div class="mono" style="color:var(--cyan);font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1rem;">>> STACK_OVERVIEW</div>
-            <div style="display:flex;flex-direction:column;gap:9px;">
-                <div class="spec-row"><span class="spec-label">Firmware</span><span class="spec-val">C++ / Arduino Framework</span></div>
-                <div class="spec-row"><span class="spec-label">Protocol</span><span class="spec-val">Modbus RTU, MQTT</span></div>
-                <div class="spec-row"><span class="spec-label">Cloud</span><span class="spec-val">AWS IoT, Lambda, S3</span></div>
-                <div class="spec-row"><span class="spec-label">Identity</span><span class="spec-val">Microsoft Entra ID</span></div>
-                <div class="spec-row"><span class="spec-label">ERP</span><span class="spec-val">SAP S/4HANA</span></div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+                <h1
+                    style="font-size:clamp(2.4rem,8vw,5.5rem);font-weight:700;letter-spacing:-0.04em;line-height:1.05;color:var(--text);">
+                    Building Reliable <span class="grad-text">Industrial Systems</span>.
+                </h1>
 
+                <p class="mono"
+                    style="font-size:clamp(0.9rem,2.5vw,1.1rem);color:var(--text2);line-height:1.75;max-width:580px;">
+                    Bridging Edge Intelligence with Enterprise Cloud Infrastructure.
+                </p>
 
-<!-- ════════════════════════════════════════
-     PAGE: EXPERIENCE
-════════════════════════════════════════ -->
-<div id="page-experience" class="page">
-<div class="page-wrap">
-    <h2 class="mono" style="font-size:clamp(1.5rem,4vw,2rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:3.5rem;color:var(--text);">Work_Timeline</h2>
-    <div id="experience-timeline" style="display:flex;flex-direction:column;gap:2.5rem;">
-        <div class="skeleton" style="height:110px;"></div>
-        <div class="skeleton" style="height:110px;"></div>
-        <div class="skeleton" style="height:110px;"></div>
-    </div>
-</div>
-</div>
+                <div class="hero-btns" style="display:flex;flex-wrap:wrap;gap:0.875rem;padding-top:0.5rem;">
+                    <button class="btn btn-primary" onclick="navigate('case-studies')">
+                        Technical Case Studies <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                    </button>
+                    <a class="btn btn-ghost"
+                        href="https://drive.google.com/file/d/1mTR8JQmSqP0X2L4T_QBQoOrTUjQ9x2_B/view" target="_blank"
+                        download>
+                        Download CV <i data-lucide="download" style="width:14px;height:14px;"></i>
+                    </a>
+                    <button class="btn btn-blue" onclick="navigate('contact')">\
+                        Contact Me <i data-lucide="send" style="width:14px;height:14px;"></i>
+                    </button>
+                </div>
+            </section>
 
-<!-- DETAIL: EXPERIENCE -->
-<div id="detail-experience" class="detail-view">
-<div class="detail-wrap">
-    <nav style="margin-bottom:2.5rem;">
-        <button class="back-btn" onclick="backTo('experience')">
-            <i data-lucide="arrow-left" style="width:14px;height:14px;"></i> BACK_TO_SYSTEM
-        </button>
-    </nav>
-    <div id="detail-experience-content"></div>
-</div>
-</div>
-
-
-<!-- ════════════════════════════════════════
-     PAGE: CONTACT
-════════════════════════════════════════ -->
-<div id="page-contact" class="page">
-<div class="page-wrap">
-
-    <div style="max-width:660px;margin-bottom:4rem;">
-        <div class="mono" style="font-size:10px;color:var(--blue);text-transform:uppercase;letter-spacing:0.2em;margin-bottom:0.75rem;">TRANSMISSION_OPEN</div>
-        <h2 class="mono" style="font-size:clamp(1.5rem,4vw,2rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:0.875rem;color:var(--text);">Get_In_Touch</h2>
-        <p style="color:var(--text2);line-height:1.8;">
-            Available for engineering collaborations, infrastructure projects, and technical consultations. Reach out through any channel below.
-        </p>
-    </div>
-
-    <div class="contact-section" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;">
-
-        <!-- IDENTITY CARD -->
-        <div class="reveal">
-            <div class="panel">
-                <div class="mono" style="color:var(--blue);font-size:10px;font-weight:700;letter-spacing:0.2em;margin-bottom:1.75rem;">>> IDENTITY_RECORD</div>
-                <div style="display:flex;flex-direction:column;">
-                    <div style="padding:0.875rem 0;border-bottom:1px solid var(--border);">
-                        <div class="mono" style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">Full_Name</div>
-                        <div style="color:var(--text);font-size:1rem;font-weight:600;">Muhammad Alaf Ramadhan</div>
+            <!-- PROFILE BRIEF -->
+            <section class="reveal profile-section"
+                style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:5rem;">
+                <div style="display:flex;flex-direction:column;gap:1.25rem;">
+                    <h2 class="mono"
+                        style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;display:flex;align-items:center;gap:10px;color:var(--text);">
+                        <i data-lucide="terminal" style="color:var(--blue);width:18px;height:18px;"></i> Profile_Brief
+                    </h2>
+                    <div
+                        style="display:flex;flex-direction:column;gap:0.875rem;color:var(--text2);line-height:1.8;font-size:1rem;">
+                        <p>I am an <strong style="color:var(--text);">Industrial IT and Infrastructure Engineer</strong>
+                            specialized in integrating physical hardware with secure digital platforms.</p>
+                        <p>My focus is on reliability, uptime, and architectural clarity in high-pressure production
+                            environments.</p>
                     </div>
-                    <div style="padding:0.875rem 0;border-bottom:1px solid var(--border);">
-                        <div class="mono" style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">Known_As</div>
-                        <div style="color:var(--text);font-size:1rem;font-weight:600;">Alaf Ramadhan</div>
-                    </div>
-                    <div style="padding:0.875rem 0;border-bottom:1px solid var(--border);">
-                        <div class="mono" style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">Role</div>
-                        <div class="mono" style="color:var(--blue);font-size:0.85rem;">Industrial IT & Infrastructure Engineer</div>
-                    </div>
-                    <div style="padding:0.875rem 0;">
-                        <div class="mono" style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">Location</div>
-                        <div style="color:var(--text);font-size:0.9rem;display:flex;align-items:center;gap:6px;">
-                            <i data-lucide="map-pin" style="width:13px;height:13px;color:var(--blue);flex-shrink:0;"></i>
-                            Sei Mangke, North Sumatera, ID
+                </div>
+
+                <div class="panel">
+                    <div class="mono"
+                        style="color:var(--blue);font-size:10px;font-weight:700;letter-spacing:0.2em;margin-bottom:1.25rem;">
+                        >> OPERATIONAL_PROFILE</div>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div class="spec-row"><span class="spec-label">Current_Org</span><span class="spec-val">Unilever
+                                Oleochemical</span></div>
+                        <div class="spec-row"><span class="spec-label">Primary_Focus</span><span
+                                class="spec-val">Edge-to-Cloud Integration</span></div>
+                        <div
+                            style="display:flex;justify-content:space-between;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11px;">
+                            <span class="spec-label">System_State</span>
+                            <span style="color:var(--green);display:flex;align-items:center;gap:6px;">
+                                <span class="ping-dot"
+                                    style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;"></span>
+                                ONLINE
+                            </span>
                         </div>
                     </div>
                 </div>
+            </section>
+
+        </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════
+     PAGE: CASE STUDIES
+════════════════════════════════════════ -->
+    <div id="page-case-studies" class="page">
+        <div class="page-wrap">
+            <div style="max-width:700px;margin-bottom:3.5rem;">
+                <h2 class="mono"
+                    style="font-size:clamp(1.5rem,4vw,2rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:6px;color:var(--text);">
+                    Case_Study_Repository</h2>
+                <p class="mono"
+                    style="color:var(--text3);font-size:10px;text-transform:uppercase;letter-spacing:0.2em;">Deep dives
+                    into industrial deployments.</p>
+            </div>
+            <div id="projects-grid"
+                style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;">
+                <div class="skeleton" style="height:260px;"></div>
+                <div class="skeleton" style="height:260px;"></div>
+                <div class="skeleton" style="height:260px;"></div>
             </div>
         </div>
+    </div>
 
-        <!-- CHANNELS -->
-        <div class="reveal" style="display:flex;flex-direction:column;gap:0.875rem;">
 
-            <a href="mailto:alaf.bussiness@gmail.com" class="contact-row" style="--hover-color:#3b82f6;"
-               onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='var(--border)'">
-                <div class="contact-icon"><i data-lucide="mail" style="width:18px;height:18px;color:#3b82f6;"></i></div>
-                <div style="flex:1;min-width:0;">
-                    <div class="mono" style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:2px;">Email</div>
-                    <div class="mono" style="color:var(--text);font-size:0.875rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">alaf.bussiness@gmail.com</div>
-                </div>
-                <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:var(--border2);flex-shrink:0;"></i>
-            </a>
+    <!-- DETAIL: PROJECT -->
+    <div id="detail-project" class="detail-view">
+        <div class="detail-wrap">
+            <nav style="margin-bottom:2.5rem;">
+                <button class="back-btn" onclick="backTo('case-studies')">
+                    <i data-lucide="arrow-left" style="width:14px;height:14px;"></i> BACK_TO_REPOSITORY
+                </button>
+            </nav>
+            <div id="detail-project-content"></div>
+        </div>
+    </div>
 
-            <a href="https://linkedin.com/in/alaf-ramadhan/" target="_blank" rel="noopener" class="contact-row"
-               onmouseover="this.style.borderColor='#0a66c2'" onmouseout="this.style.borderColor='var(--border)'">
-                <div class="contact-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#0a66c2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                </div>
-                <div style="flex:1;min-width:0;">
-                    <div class="mono" style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:2px;">LinkedIn</div>
-                    <div class="mono" style="color:var(--text);font-size:0.875rem;">linkedin.com/in/alaf-ramadhan</div>
-                </div>
-                <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:var(--border2);flex-shrink:0;"></i>
-            </a>
 
-            <a href="https://wa.me/6281397133353" target="_blank" rel="noopener" class="contact-row"
-               onmouseover="this.style.borderColor='#22c55e'" onmouseout="this.style.borderColor='var(--border)'">
-                <div class="contact-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                </div>
-                <div style="flex:1;min-width:0;">
-                    <div class="mono" style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:2px;">WhatsApp</div>
-                    <div class="mono" style="color:var(--text);font-size:0.875rem;">+62 813-9713-3353</div>
-                </div>
-                <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:var(--border2);flex-shrink:0;"></i>
-            </a>
+    <!-- ════════════════════════════════════════
+     PAGE: ARCHITECTURE
+════════════════════════════════════════ -->
+    <div id="page-architecture" class="page">
+        <div class="page-wrap">
+            <h2 class="mono"
+                style="font-size:clamp(1.5rem,4vw,2rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:2.5rem;color:var(--text);">
+                System_Blueprint</h2>
 
-            <a href="https://instagram.com/alaf_ramadhan" target="_blank" rel="noopener" class="contact-row"
-               onmouseover="this.style.borderColor='#e1306c'" onmouseout="this.style.borderColor='var(--border)'">
-                <div class="contact-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <!-- Arch diagram -->
+            <div class="panel arch-scroll" style="margin-bottom:2rem;padding:2rem;">
+                <div style="min-width:680px;display:flex;justify-content:space-between;align-items:center;gap:0.75rem;">
+                    <div class="arch-node">
+                        <div class="mono"
+                            style="color:#f97316;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">
+                            Edge_Level</div>
+                        <div style="font-weight:700;font-size:0.875rem;margin-bottom:8px;color:var(--text);">Sensors &
+                            MCUs</div>
+                        <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">Arduino</span><span
+                                class="tag">ESP32</span><span class="tag">ATmega328</span></div>
+                    </div>
+                    <div style="color:var(--border2);font-size:1.25rem;">&#8594;</div>
+                    <div class="arch-node">
+                        <div class="mono"
+                            style="color:#3b82f6;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">
+                            Protocol_Layer</div>
+                        <div style="font-weight:700;font-size:0.875rem;margin-bottom:8px;color:var(--text);">Modbus /
+                            MQTT</div>
+                        <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">RS485</span><span
+                                class="tag">RS232</span><span class="tag">I2C/SPI</span></div>
+                    </div>
+                    <div style="color:var(--border2);font-size:1.25rem;">&#8594;</div>
+                    <div class="arch-node">
+                        <div class="mono"
+                            style="color:#22d3ee;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">
+                            Gateway</div>
+                        <div style="font-weight:700;font-size:0.875rem;margin-bottom:8px;color:var(--text);">Edge
+                            Processing</div>
+                        <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">Raspberry
+                                Pi</span><span class="tag">NGINX</span><span class="tag">Node-RED</span></div>
+                    </div>
+                    <div style="color:var(--border2);font-size:1.25rem;">&#8594;</div>
+                    <div class="arch-node">
+                        <div class="mono"
+                            style="color:#a78bfa;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">
+                            Cloud</div>
+                        <div style="font-weight:700;font-size:0.875rem;margin-bottom:8px;color:var(--text);">Enterprise
+                            Infra</div>
+                        <div style="display:flex;flex-direction:column;gap:4px;"><span class="tag">AWS IoT</span><span
+                                class="tag">Lambda</span><span class="tag">Entra ID</span></div>
+                    </div>
                 </div>
-                <div style="flex:1;min-width:0;">
-                    <div class="mono" style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:2px;">Instagram</div>
-                    <div class="mono" style="color:var(--text);font-size:0.875rem;">@alaf_ramadhan</div>
+            </div>
+
+            <div class="grid-2">
+                <div class="panel">
+                    <div class="mono"
+                        style="color:var(--blue);font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1rem;">
+                        >> DESIGN_PRINCIPLES</div>
+                    <div
+                        style="display:flex;flex-direction:column;gap:10px;color:var(--text2);font-size:0.875rem;line-height:1.65;">
+                        <div style="display:flex;gap:12px;"><span class="mono"
+                                style="color:var(--border2);flex-shrink:0;">01</span><span>Fault-tolerant edge nodes
+                                with local buffering and retry logic.</span></div>
+                        <div style="display:flex;gap:12px;"><span class="mono"
+                                style="color:var(--border2);flex-shrink:0;">02</span><span>Encrypted transport using TLS
+                                1.3 from device to cloud.</span></div>
+                        <div style="display:flex;gap:12px;"><span class="mono"
+                                style="color:var(--border2);flex-shrink:0;">03</span><span>Role-based access control via
+                                Microsoft Entra ID integration.</span></div>
+                        <div style="display:flex;gap:12px;"><span class="mono"
+                                style="color:var(--border2);flex-shrink:0;">04</span><span>Stateless Lambda functions
+                                for horizontal scalability.</span></div>
+                    </div>
                 </div>
-                <i data-lucide="arrow-up-right" style="width:14px;height:14px;color:var(--border2);flex-shrink:0;"></i>
-            </a>
+                <div class="panel">
+                    <div class="mono"
+                        style="color:var(--cyan);font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1rem;">
+                        >> STACK_OVERVIEW</div>
+                    <div style="display:flex;flex-direction:column;gap:9px;">
+                        <div class="spec-row"><span class="spec-label">Firmware</span><span class="spec-val">C++ /
+                                Arduino Framework</span></div>
+                        <div class="spec-row"><span class="spec-label">Protocol</span><span class="spec-val">Modbus RTU,
+                                MQTT</span></div>
+                        <div class="spec-row"><span class="spec-label">Cloud</span><span class="spec-val">AWS IoT,
+                                Lambda, S3</span></div>
+                        <div class="spec-row"><span class="spec-label">Identity</span><span class="spec-val">Microsoft
+                                Entra ID</span></div>
+                        <div class="spec-row"><span class="spec-label">ERP</span><span class="spec-val">SAP
+                                S/4HANA</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════
+     PAGE: EXPERIENCE
+════════════════════════════════════════ -->
+    <div id="page-experience" class="page">
+        <div class="page-wrap">
+            <h2 class="mono"
+                style="font-size:clamp(1.5rem,4vw,2rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:3.5rem;color:var(--text);">
+                Work_Timeline</h2>
+            <div id="experience-timeline" style="display:flex;flex-direction:column;gap:2.5rem;">
+                <div class="skeleton" style="height:110px;"></div>
+                <div class="skeleton" style="height:110px;"></div>
+                <div class="skeleton" style="height:110px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETAIL: EXPERIENCE -->
+    <div id="detail-experience" class="detail-view">
+        <div class="detail-wrap">
+            <nav style="margin-bottom:2.5rem;">
+                <button class="back-btn" onclick="backTo('experience')">
+                    <i data-lucide="arrow-left" style="width:14px;height:14px;"></i> BACK_TO_SYSTEM
+                </button>
+            </nav>
+            <div id="detail-experience-content"></div>
+        </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════
+     PAGE: CONTACT
+════════════════════════════════════════ -->
+    <div id="page-contact" class="page">
+        <div class="page-wrap">
+
+            <div style="max-width:660px;margin-bottom:4rem;">
+                <div class="mono"
+                    style="font-size:10px;color:var(--blue);text-transform:uppercase;letter-spacing:0.2em;margin-bottom:0.75rem;">
+                    TRANSMISSION_OPEN</div>
+                <h2 class="mono"
+                    style="font-size:clamp(1.5rem,4vw,2rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:0.875rem;color:var(--text);">
+                    Get_In_Touch</h2>
+                <p style="color:var(--text2);line-height:1.8;">
+                    Available for engineering collaborations, infrastructure projects, and technical consultations.
+                    Reach out through any channel below.
+                </p>
+            </div>
+
+            <div class="contact-section"
+                style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;">
+
+                <!-- IDENTITY CARD -->
+                <div class="reveal">
+                    <div class="panel">
+                        <div class="mono"
+                            style="color:var(--blue);font-size:10px;font-weight:700;letter-spacing:0.2em;margin-bottom:1.75rem;">
+                            >> IDENTITY_RECORD</div>
+                        <div style="display:flex;flex-direction:column;">
+                            <div style="padding:0.875rem 0;border-bottom:1px solid var(--border);">
+                                <div class="mono"
+                                    style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">
+                                    Full_Name</div>
+                                <div style="color:var(--text);font-size:1rem;font-weight:600;">Muhammad Alaf Ramadhan
+                                </div>
+                            </div>
+                            <div style="padding:0.875rem 0;border-bottom:1px solid var(--border);">
+                                <div class="mono"
+                                    style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">
+                                    Known_As</div>
+                                <div style="color:var(--text);font-size:1rem;font-weight:600;">Alaf Ramadhan</div>
+                            </div>
+                            <div style="padding:0.875rem 0;border-bottom:1px solid var(--border);">
+                                <div class="mono"
+                                    style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">
+                                    Role</div>
+                                <div class="mono" style="color:var(--blue);font-size:0.85rem;">Industrial IT &
+                                    Infrastructure Engineer</div>
+                            </div>
+                            <div style="padding:0.875rem 0;">
+                                <div class="mono"
+                                    style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:3px;">
+                                    Location</div>
+                                <div
+                                    style="color:var(--text);font-size:0.9rem;display:flex;align-items:center;gap:6px;">
+                                    <i data-lucide="map-pin"
+                                        style="width:13px;height:13px;color:var(--blue);flex-shrink:0;"></i>
+                                    Sei Mangke, North Sumatera, ID
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHANNELS -->
+                <div class="reveal" style="display:flex;flex-direction:column;gap:0.875rem;">
+
+                    <a href="mailto:alaf.bussiness@gmail.com" class="contact-row" style="--hover-color:#3b82f6;"
+                        onmouseover="this.style.borderColor='#3b82f6'"
+                        onmouseout="this.style.borderColor='var(--border)'">
+                        <div class="contact-icon"><i data-lucide="mail"
+                                style="width:18px;height:18px;color:#3b82f6;"></i></div>
+                        <div style="flex:1;min-width:0;">
+                            <div class="mono"
+                                style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:2px;">
+                                Email</div>
+                            <div class="mono"
+                                style="color:var(--text);font-size:0.875rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+                                alaf.bussiness@gmail.com</div>
+                        </div>
+                        <i data-lucide="arrow-up-right"
+                            style="width:14px;height:14px;color:var(--border2);flex-shrink:0;"></i>
+                    </a>
+
+                    <a href="https://linkedin.com/in/alaf-ramadhan/" target="_blank" rel="noopener" class="contact-row"
+                        onmouseover="this.style.borderColor='#0a66c2'"
+                        onmouseout="this.style.borderColor='var(--border)'">
+                        <div class="contact-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0a66c2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </div>
+                        <div style="flex:1;min-width:0;">
+                            <div class="mono"
+                                style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:2px;">
+                                LinkedIn</div>
+                            <div class="mono" style="color:var(--text);font-size:0.875rem;">
+                                linkedin.com/in/alaf-ramadhan</div>
+                        </div>
+                        <i data-lucide="arrow-up-right"
+                            style="width:14px;height:14px;color:var(--border2);flex-shrink:0;"></i>
+                    </a>
+
+                    <a href="https://wa.me/6281397133353" target="_blank" rel="noopener" class="contact-row"
+                        onmouseover="this.style.borderColor='#22c55e'"
+                        onmouseout="this.style.borderColor='var(--border)'">
+                        <div class="contact-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                        </div>
+                        <div style="flex:1;min-width:0;">
+                            <div class="mono"
+                                style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:2px;">
+                                WhatsApp</div>
+                            <div class="mono" style="color:var(--text);font-size:0.875rem;">+62 813-9713-3353</div>
+                        </div>
+                        <i data-lucide="arrow-up-right"
+                            style="width:14px;height:14px;color:var(--border2);flex-shrink:0;"></i>
+                    </a>
+
+                    <a href="https://instagram.com/alaf_ramadhan" target="_blank" rel="noopener" class="contact-row"
+                        onmouseover="this.style.borderColor='#e1306c'"
+                        onmouseout="this.style.borderColor='var(--border)'">
+                        <div class="contact-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e1306c"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </div>
+                        <div style="flex:1;min-width:0;">
+                            <div class="mono"
+                                style="color:var(--text3);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:2px;">
+                                Instagram</div>
+                            <div class="mono" style="color:var(--text);font-size:0.875rem;">@alaf_ramadhan</div>
+                        </div>
+                        <i data-lucide="arrow-up-right"
+                            style="width:14px;height:14px;color:var(--border2);flex-shrink:0;"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- STATUS BAR -->
+            <div class="reveal panel"
+                style="margin-top:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+                <div style="display:flex;align-items:center;gap:10px;">
+                    <span class="ping-dot"
+                        style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;"></span>
+                    <span class="mono"
+                        style="color:var(--text2);font-size:10px;text-transform:uppercase;letter-spacing:0.15em;">Currently
+                        available for new projects</span>
+                </div>
+                <div class="mono"
+                    style="color:var(--text3);font-size:10px;text-transform:uppercase;letter-spacing:0.15em;">Response
+                    within 24h</div>
+            </div>
 
         </div>
     </div>
 
-    <!-- STATUS BAR -->
-    <div class="reveal panel" style="margin-top:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
-        <div style="display:flex;align-items:center;gap:10px;">
-            <span class="ping-dot" style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;"></span>
-            <span class="mono" style="color:var(--text2);font-size:10px;text-transform:uppercase;letter-spacing:0.15em;">Currently available for new projects</span>
+
+    <!-- ════════ FOOTER ════════ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="mono" style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.15em;">
+                &#169; 2025 ALAF RAMADHAN</div>
+            <div style="display:flex;gap:1.75rem;">
+                <a href="https://linkedin.com/in/alaf-ramadhan/" target="_blank" class="mono"
+                    style="font-size:10px;color:var(--text3);text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color var(--trans);"
+                    onmouseover="this.style.color='var(--text)'"
+                    onmouseout="this.style.color='var(--text3)'">LinkedIn</a>
+                <a href="mailto:alaf.bussiness@gmail.com" class="mono"
+                    style="font-size:10px;color:var(--text3);text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color var(--trans);"
+                    onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text3)'">Email</a>
+            </div>
         </div>
-        <div class="mono" style="color:var(--text3);font-size:10px;text-transform:uppercase;letter-spacing:0.15em;">Response within 24h</div>
-    </div>
-
-</div>
-</div>
+    </footer>
 
 
-<!-- ════════ FOOTER ════════ -->
-<footer>
-    <div class="footer-inner">
-        <div class="mono" style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.15em;">&#169; 2025 ALAF RAMADHAN</div>
-        <div style="display:flex;gap:1.75rem;">
-            <a href="https://linkedin.com/in/alaf-ramadhan/" target="_blank" class="mono"
-               style="font-size:10px;color:var(--text3);text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color var(--trans);"
-               onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text3)'">LinkedIn</a>
-            <a href="mailto:alaf.bussiness@gmail.com" class="mono"
-               style="font-size:10px;color:var(--text3);text-decoration:none;text-transform:uppercase;letter-spacing:0.15em;transition:color var(--trans);"
-               onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text3)'">Email</a>
-        </div>
-    </div>
-</footer>
-
-
-<!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
      JAVASCRIPT
 ════════════════════════════════════════ -->
-<script>
-// ─────────────────────────────────
-//  THEME
-// ─────────────────────────────────
-let currentTheme = localStorage.getItem('theme') || 'dark';
+    <script>
+        // ─────────────────────────────────
+        //  THEME
+        // ─────────────────────────────────
+        let currentTheme = localStorage.getItem('theme') || 'dark';
 
-function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    currentTheme = theme;
-    localStorage.setItem('theme', theme);
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            currentTheme = theme;
+            localStorage.setItem('theme', theme);
 
-    const isDark = theme === 'dark';
-    const iconName = isDark ? 'sun' : 'moon';
+            const isDark = theme === 'dark';
+            const iconName = isDark ? 'sun' : 'moon';
 
-    // Update both desktop and mobile theme icons
-    ['theme-icon','mobile-theme-icon'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-            el.setAttribute('data-lucide', iconName);
+            // Update both desktop and mobile theme icons
+            ['theme-icon', 'mobile-theme-icon'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.setAttribute('data-lucide', iconName);
+                }
+            });
+            lucide.createIcons();
         }
-    });
-    lucide.createIcons();
-}
 
-function toggleTheme() {
-    applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
-}
+        function toggleTheme() {
+            applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        }
 
-// ─────────────────────────────────
-//  MOBILE MENU
-// ─────────────────────────────────
-let mobileOpen = false;
+        // ─────────────────────────────────
+        //  MOBILE MENU
+        // ─────────────────────────────────
+        let mobileOpen = false;
 
-function toggleMobileMenu() {
-    mobileOpen = !mobileOpen;
-    document.getElementById('mobile-menu').classList.toggle('open', mobileOpen);
-    document.getElementById('hamburger').classList.toggle('open', mobileOpen);
-    document.body.style.overflow = mobileOpen ? 'hidden' : '';
-}
+        function toggleMobileMenu() {
+            mobileOpen = !mobileOpen;
+            document.getElementById('mobile-menu').classList.toggle('open', mobileOpen);
+            document.getElementById('hamburger').classList.toggle('open', mobileOpen);
+            document.body.style.overflow = mobileOpen ? 'hidden' : '';
+        }
 
-function closeMobileMenu() {
-    mobileOpen = false;
-    document.getElementById('mobile-menu').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
-    document.body.style.overflow = '';
-}
+        function closeMobileMenu() {
+            mobileOpen = false;
+            document.getElementById('mobile-menu').classList.remove('open');
+            document.getElementById('hamburger').classList.remove('open');
+            document.body.style.overflow = '';
+        }
 
-// ─────────────────────────────────
-//  CONFIG
-// ─────────────────────────────────
-const DATA_URL = '/data-study-case.json';
-const EXP_URL  = '/data-experiences.json';
-let projectsData  = [];
-let experiencesData = [];
+        // ─────────────────────────────────
+        //  CONFIG
+        // ─────────────────────────────────
+        const DATA_URL = '/data-study-case.json';
+        const EXP_URL = '/data-experiences.json';
+        let projectsData = [];
+        let experiencesData = [];
 
-const PAGES   = ['home','case-studies','architecture','experience','contact'];
-const DETAILS = ['detail-project','detail-experience'];
+        const PAGES = ['home', 'case-studies', 'architecture', 'experience', 'contact'];
+        const DETAILS = ['detail-project', 'detail-experience'];
 
-// ─────────────────────────────────
-//  ROUTING
-// ─────────────────────────────────
-function hideAll() {
-    PAGES.forEach(p => {
-        const el = document.getElementById('page-' + p);
-        el.classList.remove('active');
-        el.style.display = 'none';
-    });
-    DETAILS.forEach(d => {
-        const el = document.getElementById(d);
-        el.classList.remove('active');
-        el.style.display = 'none';
-    });
-}
+        // ─────────────────────────────────
+        //  ROUTING
+        // ─────────────────────────────────
+        function hideAll() {
+            PAGES.forEach(p => {
+                const el = document.getElementById('page-' + p);
+                el.classList.remove('active');
+                el.style.display = 'none';
+            });
+            DETAILS.forEach(d => {
+                const el = document.getElementById(d);
+                el.classList.remove('active');
+                el.style.display = 'none';
+            });
+        }
 
-function navigate(page) {
-    hideAll();
-    const el = document.getElementById('page-' + page);
-    el.style.display = 'block';
-    requestAnimationFrame(() => el.classList.add('active'));
-    updateNav(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setTimeout(initReveal, 60);
-    lucide.createIcons();
-}
+        function navigate(page) {
+            hideAll();
+            const el = document.getElementById('page-' + page);
+            el.style.display = 'block';
+            requestAnimationFrame(() => el.classList.add('active'));
+            updateNav(page);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(initReveal, 60);
+            lucide.createIcons();
+        }
 
-function showDetail(id) {
-    hideAll();
-    const el = document.getElementById(id);
-    el.style.display = 'block';
-    requestAnimationFrame(() => el.classList.add('active'));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    lucide.createIcons();
-}
+        function showDetail(id) {
+            hideAll();
+            const el = document.getElementById(id);
+            el.style.display = 'block';
+            requestAnimationFrame(() => el.classList.add('active'));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            lucide.createIcons();
+        }
 
-function backTo(page) { navigate(page); }
+        function backTo(page) { navigate(page); }
 
-function updateNav(active) {
-    // Desktop
-    PAGES.forEach(p => {
-        const el = document.getElementById('nav-' + p);
-        if (el) el.classList.toggle('active', p === active);
-    });
-    // Mobile
-    PAGES.forEach(p => {
-        const el = document.getElementById('mnav-' + p);
-        if (el) el.classList.toggle('active', p === active);
-    });
-}
+        function updateNav(active) {
+            // Desktop
+            PAGES.forEach(p => {
+                const el = document.getElementById('nav-' + p);
+                if (el) el.classList.toggle('active', p === active);
+            });
+            // Mobile
+            PAGES.forEach(p => {
+                const el = document.getElementById('mnav-' + p);
+                if (el) el.classList.toggle('active', p === active);
+            });
+        }
 
-// ─────────────────────────────────
-//  NAVBAR SCROLL
-// ─────────────────────────────────
-window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
-});
+        // ─────────────────────────────────
+        //  NAVBAR SCROLL
+        // ─────────────────────────────────
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+        });
 
-// ─────────────────────────────────
-//  SCROLL REVEAL
-// ─────────────────────────────────
-function initReveal() {
-    const io = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(el => {
-        el.classList.remove('visible');
-        io.observe(el);
-    });
-}
+        // ─────────────────────────────────
+        //  SCROLL REVEAL
+        // ─────────────────────────────────
+        function initReveal() {
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.reveal').forEach(el => {
+                el.classList.remove('visible');
+                io.observe(el);
+            });
+        }
 
-// ─────────────────────────────────
-//  HELPERS
-// ─────────────────────────────────
-function specLabel(key) {
-    return key.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
-}
-function isMonetary(val) {
-    return /\d/.test(val) && /(idr|million|usd|\$|rp)/i.test(val);
-}
+        // ─────────────────────────────────
+        //  HELPERS
+        // ─────────────────────────────────
+        function specLabel(key) {
+            return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        }
+        function isMonetary(val) {
+            return /\d/.test(val) && /(idr|million|usd|\$|rp)/i.test(val);
+        }
 
-// ─────────────────────────────────
-//  RENDER: PROJECT CARDS
-// ─────────────────────────────────
-function renderProjectCards(projects) {
-    const grid = document.getElementById('projects-grid');
-    grid.innerHTML = '';
+        // ─────────────────────────────────
+        //  RENDER: PROJECT CARDS
+        // ─────────────────────────────────
+        function renderProjectCards(projects) {
+            const grid = document.getElementById('projects-grid');
+            grid.innerHTML = '';
 
-    if (!projects.length) {
-        grid.innerHTML = `<div style="color:var(--text2);font-family:'IBM Plex Mono',monospace;font-size:12px;">No projects found.</div>`;
-        return;
-    }
+            if (!projects.length) {
+                grid.innerHTML = `<div style="color:var(--text2);font-family:'IBM Plex Mono',monospace;font-size:12px;">No projects found.</div>`;
+                return;
+            }
 
-    projects.forEach((p, idx) => {
-        const skillTags = (p.skills || []).slice(0,5).map(s => `<span class="tag">${s}</span>`).join('');
-        const valueColor = isMonetary(p.value) ? 'var(--green)' : '#60a5fa';
+            projects.forEach((p, idx) => {
+                const skillTags = (p.skills || []).slice(0, 5).map(s => `<span class="tag">${s}</span>`).join('');
+                const valueColor = isMonetary(p.value) ? 'var(--green)' : '#60a5fa';
 
-        const card = document.createElement('div');
-        card.className = 'card reveal';
-        card.setAttribute('role','button'); card.setAttribute('tabindex','0');
-        card.onclick = () => renderProjectDetail(idx);
-        card.onkeydown = e => { if(e.key==='Enter') renderProjectDetail(idx); };
+                const card = document.createElement('div');
+                card.className = 'card reveal';
+                card.setAttribute('role', 'button'); card.setAttribute('tabindex', '0');
+                card.onclick = () => renderProjectDetail(idx);
+                card.onkeydown = e => { if (e.key === 'Enter') renderProjectDetail(idx); };
 
-        card.innerHTML = `
+                card.innerHTML = `
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem;">
                 <span class="mono" style="font-size:10px;color:var(--blue);text-transform:uppercase;letter-spacing:0.2em;">${p.project_date}</span>
                 <i data-lucide="arrow-up-right" class="card-arrow" style="width:15px;height:15px;color:var(--border2);flex-shrink:0;"></i>
@@ -938,45 +1516,45 @@ function renderProjectCards(projects) {
             <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:1.1rem;">${skillTags}</div>
             <div class="mono" style="color:${valueColor};font-size:10px;border-top:1px solid var(--border);padding-top:0.875rem;text-transform:uppercase;letter-spacing:0.15em;">Est_Value: ${p.value}</div>
         `;
-        grid.appendChild(card);
-    });
+                grid.appendChild(card);
+            });
 
-    lucide.createIcons();
-    setTimeout(initReveal, 60);
-}
+            lucide.createIcons();
+            setTimeout(initReveal, 60);
+        }
 
-// ─────────────────────────────────
-//  RENDER: PROJECT DETAIL
-// ─────────────────────────────────
-function renderProjectDetail(idx) {
-    const p = projectsData[idx];
-    if (!p) return;
+        // ─────────────────────────────────
+        //  RENDER: PROJECT DETAIL
+        // ─────────────────────────────────
+        function renderProjectDetail(idx) {
+            const p = projectsData[idx];
+            if (!p) return;
 
-    const execSteps = (p.technical_execution || [])
-        .filter(s => !/^lorem ipsum/i.test(s.trim()))
-        .map(s => `<li style="margin-bottom:0.65rem;">${s}</li>`).join('');
+            const execSteps = (p.technical_execution || [])
+                .filter(s => !/^lorem ipsum/i.test(s.trim()))
+                .map(s => `<li style="margin-bottom:0.65rem;">${s}</li>`).join('');
 
-    const specRows = Object.entries(p.spec || {}).map(([k,v]) => `
+            const specRows = Object.entries(p.spec || {}).map(([k, v]) => `
         <div class="spec-row">
             <span class="spec-label">${specLabel(k)}</span>
             <span class="spec-val" style="text-align:right;max-width:60%;">${v}</span>
         </div>`).join('');
 
-    const valueColor = isMonetary(p.value) ? 'var(--green)' : '#60a5fa';
-    const skillTags = (p.skills||[]).map(s=>`<span class="tag">${s}</span>`).join('');
-    const refDate = String(p.project_date).replace(/[^a-z0-9]/gi,'-').toUpperCase();
+            const valueColor = isMonetary(p.value) ? 'var(--green)' : '#60a5fa';
+            const skillTags = (p.skills || []).map(s => `<span class="tag">${s}</span>`).join('');
+            const refDate = String(p.project_date).replace(/[^a-z0-9]/gi, '-').toUpperCase();
 
-    document.getElementById('detail-project-content').innerHTML = `
+            document.getElementById('detail-project-content').innerHTML = `
         <div style="display:flex;flex-direction:column;gap:1.75rem;">
             <span class="mono" style="color:var(--blue);font-size:10px;text-transform:uppercase;letter-spacing:0.2em;">PROJ_REF: ${refDate}</span>
             <h1 class="mono" style="font-size:clamp(1.6rem,5vw,3rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.04em;line-height:1.1;color:var(--text);">${p.title}</h1>
             <div style="display:flex;flex-wrap:wrap;gap:5px;">${skillTags}</div>
 
             ${p.imagelocation
-                ? `<img src="${p.imagelocation}" alt="${p.title}" class="project-img"
+                    ? `<img src="${p.imagelocation}" alt="${p.title}" class="project-img"
                        onerror="this.outerHTML='<div class=project-img-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=%23888 stroke-width=1.5><rect x=3 y=3 width=18 height=18 rx=2/><circle cx=8.5 cy=8.5 r=1.5/><path d=m21 15-5-5L5 21/></svg></div>'">`
-                : `<div class="project-img-placeholder"><i data-lucide="image" style="width:48px;height:48px;"></i></div>`
-            }
+                    : `<div class="project-img-placeholder"><i data-lucide="image" style="width:48px;height:48px;"></i></div>`
+                }
 
             <div class="grid-2-left" style="margin-top:0.25rem;">
                 <div style="display:flex;flex-direction:column;gap:2rem;">
@@ -1008,38 +1586,38 @@ function renderProjectDetail(idx) {
         </div>
     `;
 
-    showDetail('detail-project');
-    lucide.createIcons();
-}
+            showDetail('detail-project');
+            lucide.createIcons();
+        }
 
-// ─────────────────────────────────
-//  EXPERIENCE: FETCH + RENDER
-// ─────────────────────────────────
-function formatPeriod(start, end) {
-    const fmt = d => {
-        if (!d || d === 'present') return 'Present';
-        const [y,m] = d.split('-');
-        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-        return m ? `${months[parseInt(m,10)-1]} ${y}` : y;
-    };
-    return `${fmt(start)} – ${fmt(end)}`;
-}
+        // ─────────────────────────────────
+        //  EXPERIENCE: FETCH + RENDER
+        // ─────────────────────────────────
+        function formatPeriod(start, end) {
+            const fmt = d => {
+                if (!d || d === 'present') return 'Present';
+                const [y, m] = d.split('-');
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                return m ? `${months[parseInt(m, 10) - 1]} ${y}` : y;
+            };
+            return `${fmt(start)} – ${fmt(end)}`;
+        }
 
-function renderExperienceTimeline(experiences) {
-    const container = document.getElementById('experience-timeline');
-    container.innerHTML = '';
+        function renderExperienceTimeline(experiences) {
+            const container = document.getElementById('experience-timeline');
+            container.innerHTML = '';
 
-    experiences.forEach((e, idx) => {
-        const period   = formatPeriod(e.date_start, e.date_end);
-        const isActive = !e.date_end || e.date_end === 'present';
+            experiences.forEach((e, idx) => {
+                const period = formatPeriod(e.date_start, e.date_end);
+                const isActive = !e.date_end || e.date_end === 'present';
 
-        const item = document.createElement('div');
-        item.className = 'tl-item reveal';
-        item.setAttribute('role','button'); item.setAttribute('tabindex','0');
-        item.onclick = () => showExperience(idx);
-        item.onkeydown = ev => { if(ev.key==='Enter') showExperience(idx); };
+                const item = document.createElement('div');
+                item.className = 'tl-item reveal';
+                item.setAttribute('role', 'button'); item.setAttribute('tabindex', '0');
+                item.onclick = () => showExperience(idx);
+                item.onkeydown = ev => { if (ev.key === 'Enter') showExperience(idx); };
 
-        item.innerHTML = `
+                item.innerHTML = `
             <div class="tl-dot"></div>
             <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px;">
                 <span class="mono" style="color:var(--text3);font-size:10px;text-transform:uppercase;letter-spacing:0.2em;">${period}</span>
@@ -1054,25 +1632,25 @@ function renderExperienceTimeline(experiences) {
                 View_Details <i data-lucide="chevron-right" style="width:10px;height:10px;"></i>
             </div>
         `;
-        container.appendChild(item);
-    });
+                container.appendChild(item);
+            });
 
-    lucide.createIcons();
-    setTimeout(initReveal, 60);
-}
+            lucide.createIcons();
+            setTimeout(initReveal, 60);
+        }
 
-function showExperience(idx) {
-    const e = experiencesData[idx];
-    if (!e) return;
+        function showExperience(idx) {
+            const e = experiencesData[idx];
+            if (!e) return;
 
-    const period   = formatPeriod(e.date_start, e.date_end);
-    const isActive = !e.date_end || e.date_end === 'present';
-    const refKey   = `${(e.date_start||'').replace('-','_').toUpperCase()}_EXP`;
+            const period = formatPeriod(e.date_start, e.date_end);
+            const isActive = !e.date_end || e.date_end === 'present';
+            const refKey = `${(e.date_start || '').replace('-', '_').toUpperCase()}_EXP`;
 
-    const responsibilities = (e.core_responsibility||[])
-        .map(r => `<li style="margin-bottom:0.65rem;">${r}</li>`).join('');
+            const responsibilities = (e.core_responsibility || [])
+                .map(r => `<li style="margin-bottom:0.65rem;">${r}</li>`).join('');
 
-    document.getElementById('detail-experience-content').innerHTML = `
+            document.getElementById('detail-experience-content').innerHTML = `
         <span class="mono" style="color:var(--blue);font-size:10px;text-transform:uppercase;letter-spacing:0.2em;">LOG: ${refKey}</span>
         <h1 class="mono" style="font-size:clamp(1.6rem,5vw,3rem);font-weight:700;text-transform:uppercase;letter-spacing:-0.04em;line-height:1.1;margin:0.875rem 0 4px;color:var(--text);">${e.title_job}</h1>
         <div class="mono" style="font-size:0.95rem;color:var(--text2);margin-bottom:4px;">${e.company}</div>
@@ -1098,70 +1676,71 @@ function showExperience(idx) {
         </div>
     `;
 
-    showDetail('detail-experience');
-    lucide.createIcons();
-}
+            showDetail('detail-experience');
+            lucide.createIcons();
+        }
 
-// ─────────────────────────────────
-//  FETCH: PROJECTS
-// ─────────────────────────────────
-async function loadProjects() {
-    try {
-        const res = await fetch(DATA_URL);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const raw = await res.json();
-        projectsData = Array.isArray(raw) ? raw : (raw.projects || []);
-        renderProjectCards(projectsData);
-    } catch (err) {
-        console.error('Failed to load project data:', err);
-        document.getElementById('projects-grid').innerHTML = `
+        // ─────────────────────────────────
+        //  FETCH: PROJECTS
+        // ─────────────────────────────────
+        async function loadProjects() {
+            try {
+                const res = await fetch(DATA_URL);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const raw = await res.json();
+                projectsData = Array.isArray(raw) ? raw : (raw.projects || []);
+                renderProjectCards(projectsData);
+            } catch (err) {
+                console.error('Failed to load project data:', err);
+                document.getElementById('projects-grid').innerHTML = `
             <div style="grid-column:1/-1;padding:2.5rem;background:var(--bg2);border:1px solid var(--border2);border-radius:2px;text-align:center;">
                 <div class="mono" style="color:#ef4444;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:8px;">ERROR_LOADING_DATA</div>
                 <p style="color:var(--text2);font-size:0.85rem;">Could not fetch <code>${DATA_URL}</code>.</p>
             </div>`;
-    }
-}
+            }
+        }
 
-// ─────────────────────────────────
-//  FETCH: EXPERIENCES
-// ─────────────────────────────────
-async function loadExperiences() {
-    try {
-        const res = await fetch(EXP_URL);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const raw = await res.json();
-        experiencesData = Array.isArray(raw) ? raw : (raw.experiences || []);
-        renderExperienceTimeline(experiencesData);
-    } catch (err) {
-        console.error('Failed to load experience data:', err);
-        document.getElementById('experience-timeline').innerHTML = `
+        // ─────────────────────────────────
+        //  FETCH: EXPERIENCES
+        // ─────────────────────────────────
+        async function loadExperiences() {
+            try {
+                const res = await fetch(EXP_URL);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const raw = await res.json();
+                experiencesData = Array.isArray(raw) ? raw : (raw.experiences || []);
+                renderExperienceTimeline(experiencesData);
+            } catch (err) {
+                console.error('Failed to load experience data:', err);
+                document.getElementById('experience-timeline').innerHTML = `
             <div style="padding:2.5rem;background:var(--bg2);border:1px solid var(--border2);border-radius:2px;text-align:center;">
                 <div class="mono" style="color:#ef4444;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:8px;">ERROR_LOADING_DATA</div>
                 <p style="color:var(--text2);font-size:0.85rem;">Could not fetch <code>${EXP_URL}</code>.</p>
             </div>`;
-    }
-}
+            }
+        }
 
-// ─────────────────────────────────
-//  BOOT
-// ─────────────────────────────────
-window.addEventListener('DOMContentLoaded', () => {
-    // Hide all non-home pages
-    PAGES.forEach(p => {
-        if (p !== 'home') document.getElementById('page-' + p).style.display = 'none';
-    });
-    DETAILS.forEach(d => { document.getElementById(d).style.display = 'none'; });
+        // ─────────────────────────────────
+        //  BOOT
+        // ─────────────────────────────────
+        window.addEventListener('DOMContentLoaded', () => {
+            // Hide all non-home pages
+            PAGES.forEach(p => {
+                if (p !== 'home') document.getElementById('page-' + p).style.display = 'none';
+            });
+            DETAILS.forEach(d => { document.getElementById(d).style.display = 'none'; });
 
-    // Apply saved theme
-    applyTheme(currentTheme);
+            // Apply saved theme
+            applyTheme(currentTheme);
 
-    lucide.createIcons();
-    setTimeout(initReveal, 100);
+            lucide.createIcons();
+            setTimeout(initReveal, 100);
 
-    // Fetch data
-    loadProjects();
-    loadExperiences();
-});
-</script>
+            // Fetch data
+            loadProjects();
+            loadExperiences();
+        });
+    </script>
 </body>
+
 </html>
