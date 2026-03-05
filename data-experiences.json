@@ -1,0 +1,104 @@
+{
+  "experiences": [
+    {
+      "title_job": "IT Support Helpdesk (3rd Party Contractor)",
+      "company": "Unilever Oleochemical Indonesia – Sei Mangke, North Sumatera",
+      "date_start": "2025-01",
+      "date_end": "present",
+
+      "brief_description": "Provided enterprise IT support within Unilever’s industrial production environment under PT Accord Innovation. Responsible for maintaining operational stability of user devices, network services, printers, and enterprise authentication systems across the Sei Mangke and Medan sites.",
+
+      "core_responsibility": [
+        "Provided technical support resolving user device issues including login failures, corrupted software, license mismatches, and system access errors.",
+        "Maintained continuous operation of enterprise printer infrastructure including SafeCom servers and managed laser printers operating 24-hour production support.",
+        "Managed IT asset lifecycle including inventory tracking, tagging, documentation, and hardware transfers.",
+        "Administered user access management through Microsoft Entra ID including role assignment and authentication management.",
+        "Maintained Active Directory Access Control Lists and handled user privilege adjustments.",
+        "Provided technical support for company events including device preparation and live streaming setup.",
+        "Supervised third-party vendor visits ensuring compliance with service level agreements.",
+        "Troubleshot enterprise network issues including VPN connectivity and local infrastructure stability.",
+        "Collaborated with external software vendors during system design and early development stages.",
+        "Provided SAP and SAP S/4HANA installation and troubleshooting support, escalating complex issues to L2 SAP specialists when required."
+      ],
+
+      "impact": "Maintained operational IT stability in a large industrial environment while supporting authentication infrastructure, enterprise printing systems, and critical network availability."
+    },
+
+    {
+      "title_job": "Firmware Engineer",
+      "company": "PT Synapsis Synergi Digital – Jakarta",
+      "date_start": "2024-03",
+      "date_end": "2024-10",
+
+      "brief_description": "Worked on internal IoT product development focusing on firmware engineering, industrial communication protocols, and embedded monitoring systems.",
+
+      "core_responsibility": [
+        "Developed monitoring systems using Digi IO, Modbus communication, ESP32 microcontrollers, and RS485 industrial interfaces.",
+        "Upgraded internal firmware libraries supporting multiple deployment use cases including WiFi and Ethernet communication.",
+        "Designed and implemented a Raspberry Pi central hub dashboard supporting Modbus TCP/RTU, serial communication, and digital IO control.",
+        "Developed backend interfaces using Python Flask, web technologies, and SQL databases.",
+        "Maintained source control and code documentation using Git and office documentation tools."
+      ],
+
+      "impact": "Improved internal IoT platform capabilities by enhancing communication libraries and creating centralized monitoring infrastructure for industrial device integration."
+    },
+
+    {
+      "title_job": "IoT Engineer",
+      "company": "PT Faraday Tekno Energi – Bogor",
+      "date_start": "2020-08",
+      "date_end": "2023-01",
+
+      "brief_description": "Responsible for development and production of IoT-based energy monitoring devices including embedded firmware, PCB design, and system architecture.",
+
+      "core_responsibility": [
+        "Developed firmware for Arduino, ESP32, and Raspberry Pi based monitoring devices.",
+        "Participated in electrical diagram design, PCB layout development, and overall system architecture planning.",
+        "Managed manufacturing preparation and device production processes.",
+        "Collaborated with backend engineers to ensure reliable communication between hardware devices and server infrastructure.",
+        "Led engineering efforts to develop new device features and system enhancements."
+      ],
+
+      "impact": "Contributed to the development and deployment of IoT energy monitoring hardware used in real-world energy infrastructure projects."
+    },
+
+    {
+      "title_job": "Computer Engineer Intern",
+      "company": "PT Delta Rezeki Abadi – Bogor",
+      "date_start": "2022-10",
+      "date_end": "2023-03",
+
+      "brief_description": "Internship focused on industrial network infrastructure and IoT-based production monitoring systems.",
+
+      "core_responsibility": [
+        "Developed and maintained Local Area Network infrastructure to improve operational efficiency and scalability.",
+        "Implemented IoT-based data collection from production machines.",
+        "Assisted troubleshooting hardware and software network issues.",
+        "Monitored network performance ensuring continuous availability and uptime.",
+        "Collaborated with backend engineers on data integration and monitoring systems.",
+        "Contributed to engineering solutions that improved operational productivity."
+      ],
+
+      "impact": "Supported modernization of factory monitoring infrastructure through network improvements and IoT-based production data collection."
+    },
+
+    {
+      "title_job": "General Computer Technician (Side Business)",
+      "company": "Rama Computer – Tangerang",
+      "date_start": "2019-08",
+      "date_end": "present",
+
+      "brief_description": "Independent technical service providing computer diagnostics, repair services, hardware upgrades, and consulting for individual customers.",
+
+      "core_responsibility": [
+        "Diagnosed and repaired hardware and software issues across multiple computer platforms.",
+        "Installed and upgraded hardware components to improve system performance.",
+        "Advised customers on computer purchases and hardware compatibility.",
+        "Sold computer parts and accessories while ensuring correct system configurations.",
+        "Provided both in-person and remote technical support for troubleshooting computer problems."
+      ],
+
+      "impact": "Built a long-running independent technical service delivering computer repair and consulting solutions to local customers."
+    }
+  ]
+}

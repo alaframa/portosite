@@ -1,0 +1,294 @@
+{
+  "projects": [
+    {
+      "title": "Smart Driver Monitoring System (Face Recognition Focused)",
+      "project_date": "2025",
+      "value": "25 M IDR",
+
+      "skills": [
+        "Hardware Integration",
+        "PCB Design",
+        "Edge Computing",
+        "Networking",
+        "Cloud Infrastructure"
+      ],
+
+      "description": "Collaborative engineering project with Master's students to build a facial-recognition based driver monitoring platform. The focus of the work centered on hardware architecture, system integration, and infrastructure required to support remote monitoring and secure connectivity.",
+
+      "challenge": "The project required integrating multiple embedded subsystems into a compact platform capable of operating in real-time automotive environments. Ensuring reliable connectivity, stable data transfer, and secure remote access while maintaining low-power edge hardware constraints was a major challenge.",
+
+      "technical_execution": [
+        "Designed and integrated hardware architecture using Orange Pi Zero 3 as the edge compute platform. Custom PCB boards were developed to accommodate LTE communication modules and peripheral sensor interfaces.",
+        "Implemented secure remote infrastructure using VPN-based connectivity combined with NGINX reverse proxy and Cloudflare routing for secure external access.",
+        "Deployed backend support services on AWS EC2 and AWS Lambda to handle device communication and remote diagnostics.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel risus nec velit posuere faucibus. Donec sit amet urna non metus volutpat interdum sed in libero."
+      ],
+
+      "spec": {
+        "edge_device": "Orange Pi Zero 3",
+        "connectivity": "4G LTE Module",
+        "cloud": "AWS EC2, AWS Lambda",
+        "network_security": "VPN, Cloudflare Routing"
+      },
+
+      "imagelocation": "images/projects/driver-monitoring-system.jpg"
+    },
+
+    {
+      "title": "Orang Buta Assistant – Braille Learning System",
+      "project_date": "2025",
+      "value": "17 M IDR",
+
+      "skills": [
+        "Embedded Systems",
+        "Assistive Technology",
+        "Microcontroller Programming",
+        "Audio Systems"
+      ],
+
+      "description": "Assistive learning system designed to help visually impaired users learn Braille characters through tactile buttons combined with real-time audio feedback.",
+
+      "challenge": "The primary challenge was designing an intuitive interaction interface that visually impaired users could operate easily while ensuring clear audio feedback and reliable input detection.",
+
+      "technical_execution": [
+        "Developed a hardware interface using ESP32 microcontroller connected to tactile input buttons representing Braille characters.",
+        "Integrated an audio output system through an amplifier module and speaker to deliver immediate voice feedback for each pressed character.",
+        "Implemented firmware logic to map physical button inputs to corresponding Braille characters and trigger the correct audio playback.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere metus non massa consequat, vel gravida mi dignissim."
+      ],
+
+      "spec": {
+        "controller": "ESP32",
+        "audio_system": "Amplifier Module + Speaker",
+        "interface": "Physical Button Array"
+      },
+
+      "imagelocation": "images/projects/braille-assistant.jpg"
+    },
+
+    {
+      "title": "Three-Phase Energy Monitoring System (Undergraduate Thesis)",
+      "project_date": "2024",
+      "value": "Final Academic Research Project ",
+
+      "skills": [
+        "IoT Systems",
+        "Cloud Infrastructure",
+        "Energy Monitoring",
+        "Embedded Programming"
+      ],
+
+      "description": "Final undergraduate thesis project conducted in collaboration with Prasetiya Mulya University focusing on the development of a cloud-connected three-phase energy monitoring system.",
+
+      "challenge": "The system needed to accurately capture real-time electrical measurements across a three-phase grid while maintaining reliable data synchronization with cloud infrastructure.",
+
+      "technical_execution": [
+        "Designed an IoT-based monitoring device using Wemos Lollin microcontroller integrated with PZEM004T energy measurement modules.",
+        "Implemented real-time data transmission to AWS cloud infrastructure using EC2 compute services and Lambda event processing.",
+        "Configured AWS S3 for long-term data storage and historical monitoring analysis.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet velit sed orci dignissim, at elementum erat posuere."
+      ],
+
+      "spec": {
+        "controller": "Wemos Lollin",
+        "sensor_module": "PZEM 004T",
+        "cloud_stack": "AWS EC2, AWS Lambda, AWS S3"
+      },
+
+      "imagelocation": "images/projects/energy-monitoring-thesis.jpg"
+    },
+
+    {
+      "title": "Internal IoT Development – PT Synapsis Synergi Digital",
+      "project_date": "2024",
+      "value": "Internal Product Development",
+
+      "skills": [
+        "Embedded Systems",
+        "Industrial Protocols",
+        "IoT Integration",
+        "Sensor Networking"
+      ],
+
+      "description": "Participated in internal product development focusing on embedded systems integration using ESP32 and Raspberry Pi platforms with multiple industrial sensors and communication protocols.",
+
+      "challenge": "The engineering task involved ensuring compatibility between multiple industrial communication standards while maintaining reliable sensor data acquisition and processing.",
+
+      "technical_execution": [
+        "Developed firmware interfaces supporting communication protocols including RS485, RS232, Modbus TCP, and Modbus RTU.",
+        "Integrated multiple sensors such as SHT environmental sensors and industrial interface modules via I2C, UART, and SPI communication buses.",
+        "Performed system-level debugging and testing to ensure stable device communication across heterogeneous hardware platforms.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed lacus sed urna consequat feugiat."
+      ],
+
+      "spec": {
+        "platforms": "ESP32, Raspberry Pi",
+        "communication_protocols": "RS485, RS232, Modbus TCP/RTU",
+        "interfaces": "I2C, UART, SPI"
+      },
+
+      "imagelocation": "images/projects/internal-iot-dev.jpg"
+    },
+
+    {
+      "title": "Solar PV Energy Monitoring System",
+      "project_date": "2022-2023",
+      "value": "49 Million IDR",
+
+      "skills": [
+        "Solar Energy Systems",
+        "Embedded Systems",
+        "Sensor Networks",
+        "Data Collection"
+      ],
+
+      "description": "Developed an energy monitoring and control platform for a solar photovoltaic installation used for research and performance analysis.",
+
+      "challenge": "Collecting reliable sensor data from solar infrastructure required custom hardware interfaces and stable long-distance communication over industrial serial networks.",
+
+      "technical_execution": [
+        "Designed custom PCB boards using ATmega328 microcontroller integrated with ESP8266 modules for network communication.",
+        "Implemented RS485 serial communication modules to transmit energy and environmental sensor data.",
+        "Integrated environmental sensors including thermistors, humidity sensors, and flow meters to capture operational data for research purposes.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis magna vitae libero hendrerit viverra."
+      ],
+
+      "spec": {
+        "controller": "ATmega328",
+        "network": "ESP8266",
+        "communication": "RS485",
+        "project_value": "49,000,000 IDR"
+      },
+
+      "imagelocation": "images/projects/solar-monitoring.jpg"
+    },
+
+    {
+      "title": "Office Network Infrastructure Rework – PT Delta Rezeki Abadi",
+      "project_date": "2022",
+      "value": "28 Million IDR",
+
+      "skills": [
+        "Network Engineering",
+        "Infrastructure Design",
+        "Linux Server Administration"
+      ],
+
+      "description": "Redesigned the entire office network architecture by merging two separate buildings into a unified infrastructure with centralized services and multi-ISP redundancy.",
+
+      "challenge": "The infrastructure needed to support multiple internet providers while ensuring failover capability and reliable internal connectivity across buildings.",
+
+      "technical_execution": [
+        "Implemented fiber optic backbone connections between two buildings to create a unified network environment.",
+        "Configured Linux-based server for access control and print server services.",
+        "Integrated four ISP connections through industrial routers to improve network reliability and bandwidth distribution.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec sed massa in elit laoreet tempus."
+      ],
+
+      "spec": {
+        "server": "Linux Server",
+        "network": "Fiber Optic Backbone",
+        "connectivity": "4 ISP Multi-WAN",
+        "project_value": "28,000,000 IDR"
+      },
+
+      "imagelocation": "images/projects/network-rework.jpg"
+    },
+
+    {
+      "title": "Production Line Bottle Counter System",
+      "project_date": "2022",
+      "value": "Industrial IoT Deployment",
+
+      "skills": [
+        "Industrial IoT",
+        "Production Monitoring",
+        "Sensor Integration"
+      ],
+
+      "description": "Developed an IoT-based production monitoring system capable of counting bottles produced across multiple manufacturing lines in real time.",
+
+      "challenge": "The system needed to operate reliably within industrial environments while maintaining accurate detection rates and centralized reporting.",
+
+      "technical_execution": [
+        "Implemented ESP01 microcontroller nodes connected to optical proximity sensors for bottle detection.",
+        "Integrated Raspberry Pi gateway to collect sensor events from multiple production lines.",
+        "Deployed backend monitoring infrastructure on AWS EC2 to visualize production data.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius erat id felis volutpat, nec tristique libero tristique."
+      ],
+
+      "spec": {
+        "controller": "ESP01",
+        "gateway": "Raspberry Pi",
+        "cloud": "AWS EC2",
+        "sensor": "Optical Proximity Sensor"
+      },
+
+      "imagelocation": "images/projects/production-counter.jpg"
+    },
+
+    {
+      "title": "Faraday Energy Monitoring Prototype",
+      "project_date": "2021",
+      "value": "3 Million IDR",
+
+      "skills": [
+        "Embedded Electronics",
+        "Sensor Integration",
+        "Energy Monitoring"
+      ],
+
+      "description": "Developed an early prototype of an energy monitoring device capable of measuring electrical parameters and transmitting the data to a backend server.",
+
+      "challenge": "Building a reliable sensor interface capable of measuring voltage and current accurately while integrating multiple environmental sensors in a compact embedded device.",
+
+      "technical_execution": [
+        "Implemented ESP32 microcontroller as the central processing unit for sensor acquisition and communication.",
+        "Integrated voltage, current, temperature, and humidity sensors including ACT013 and DHT12 modules.",
+        "Added actuator components such as relay control and OLED display for real-time device status feedback.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor neque vitae orci tincidunt, at suscipit lorem elementum."
+      ],
+
+      "spec": {
+        "controller": "ESP32",
+        "sensors": "Voltage Sensor, ACT013 Current Sensor, DHT12, Thermistor NTC",
+        "actuator": "Relay, OLED Display",
+        "project_value": "3,000,000 IDR"
+      },
+
+      "imagelocation": "images/projects/faraday-prototype.jpg"
+    },
+
+    {
+      "title": "Decentralized Solar-Based Power Station Research Project",
+      "project_date": "2020",
+      "value": "80 Million IDR",
+
+      "skills": [
+        "Renewable Energy Systems",
+        "Embedded Systems",
+        "Data Acquisition"
+      ],
+
+      "description": "Collaborative multidisciplinary research project focused on building decentralized solar-based power station technology integrating energy monitoring and automation concepts.",
+
+      "challenge": "The research required building a scalable monitoring system capable of capturing energy metrics from solar installations while supporting future automation development.",
+
+      "technical_execution": [
+        "Developed sensor-based monitoring system using Arduino Nano and ESP01 communication modules.",
+        "Integrated voltage and current measurement circuits designed specifically for solar PV infrastructure.",
+        "Implemented backend communication architecture to transmit monitoring data for analysis and research purposes.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non erat sed libero volutpat luctus."
+      ],
+
+      "spec": {
+        "controller": "Arduino Nano",
+        "communication": "ESP01",
+        "sensors": "Voltage Sensor, AMS17 Current Sensor",
+        "project_value": "80,000,000 IDR"
+      },
+
+      "imagelocation": "images/projects/solar-power-station.jpg"
+    }
+  ]
+}
